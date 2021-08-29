@@ -2,4 +2,4 @@
 
 University mini-project, 5th semester
 
-In progress....
+### In initial phase
