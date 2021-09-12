@@ -1,0 +1,141 @@
+@media only screen and (max-width: 1200px) {
+    .home .content .title
+    {
+      font-size: 55px;
+    }
+    .heroimg
+    {
+  width: 100%;
+    }
+        .stats .text .stat
+    {
+      font-size: 35px;
+    }
+    .stats .text .stat .font
+    {
+    width: 75%;
+    }
+    .compatible .comp-desc
+{
+  width: 60%;
+
+}
+  }
+
+  
+  @media only screen and (max-width: 900px) 
+      {
+          .features .wrapper
+        {
+        display: grid;
+        grid-template-columns: 1fr;
+        }
+        .compatible .comp-desc
+        {
+          width: 75%;
+        
+        }
+        .compatible .comp-desc .comp-desc-head
+            {
+            font-size: 50px;
+            }
+            .compatible .comp-desc .comp-desc-text
+            {
+            font-size: 17px;
+            }
+      }
+
+
+  @media only screen and (max-width: 600px)
+  {
+      .home .content a
+    {
+      font-size: 12px;
+    }
+    .stats .text .stat
+    {
+      font-size: 30px;
+    }
+    .features .wrapper .left-wrap
+{
+  padding: 20px 40px;
+}
+    .features .wrapper .head
+{
+  font-size: 40px;
+}
+.features .wrapper .right-wrap
+{
+    z-index: 5000;
+    margin-bottom:60px;
+}    
+.height
+{
+  height: 450px;
+  margin-top: 50px;
+}
+.desc-head
+{
+  font-size: 24px;
+}
+.desc-text
+{
+  font-size: 15px;
+}        .compatible .comp-desc
+{
+  width: 90%;
+
+}
+.compatible .comp-desc .comp-desc-head
+    {
+    font-size: 40px;
+    }
+    .compatible .comp-desc .comp-desc-text
+    {
+    font-size: 15px;
+    }
+    .footer .contain .title
+    {
+      font-size: 30px;
+    }
+    .footer .contain .links a
+    {
+      margin: 0 12px;
+    }
+  }
+
+
+  @media only screen and (max-width: 400px)
+  {     .home .content .title
+    {
+      font-size: 38px;
+    }
+    .stats .text .stat
+    {
+      font-size: 25px;
+    }
+    .stats .text .stat .font
+    {
+        width: 85%;
+        }
+        .features .wrapper .left-wrap
+        {
+        padding: 20px 20px;
+        }
+            .features .wrapper .head
+        {
+        font-size: 35px;
+        }
+        .features .wrapper .sub-head
+        {
+          font-size: 15px;
+        }
+        .compatible .comp-desc .comp-desc-head
+        {
+        font-size: 35px;
+        }
+        .footer .contain .links a
+    {
+      font-size: 13px;
+    }
+  }
