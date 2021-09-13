@@ -98,7 +98,6 @@ section{
   background-color: var(--light);
   background-image: radial-gradient(circle, #13004d 3%, transparent 1%), radial-gradient(circle, #13004d 3%, transparent 7%);
   background-size: 20px 20px;
-  font-family: 'Poppins', sans-serif;
 
 }
 
