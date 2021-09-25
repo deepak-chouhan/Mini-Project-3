@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="81.31" height="118.06" viewBox="0 0 81.31 118.06">
+  <defs>
+    <linearGradient id="linear-gradient" x1="16.29" y1="94.98" x2="65.02" y2="94.98" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#272a10"/>
+      <stop offset="1" stop-color="#292e1b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="16.29" y1="94.98" x2="40.66" y2="94.98" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2c401b"/>
+      <stop offset="1" stop-color="#42511b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="2.55" y1="23.59" x2="2.55" y2="81.93" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c3d1d1"/>
+      <stop offset="1" stop-color="#9ba4a6"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="78.76" y1="23.7" x2="78.76" y2="81.57" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#505d5d"/>
+      <stop offset="1" stop-color="#6e7979"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="60.88" y1="81.03" x2="60.88" y2="141.79" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5f686a"/>
+      <stop offset="1" stop-color="#415756"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="1.2" y1="79.94" x2="42.02" y2="103.47" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#57585c"/>
+      <stop offset="1" stop-color="#6e6d70"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="39.09" y1="2.25" x2="80.07" y2="25.46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#75797d"/>
+      <stop offset="1" stop-color="#d5e0e0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-8" x1="41.11" y1="2.53" x2="2.36" y2="25.19" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c3d1d1"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-9" x1="7.25" y1="52.82" x2="74.06" y2="52.82" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2d1c1b"/>
+      <stop offset="0.5" stop-color="#382822"/>
+      <stop offset="1" stop-color="#2d1c1b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-10" x1="5.06" y1="26.96" x2="41.62" y2="6.37" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#495656"/>
+      <stop offset="1" stop-color="#657171"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-11" x1="39.92" y1="6.26" x2="76.51" y2="27.36" xlink:href="#linear-gradient-10"/>
+    <linearGradient id="linear-gradient-12" x1="75.53" y1="26.3" x2="75.53" y2="79.61" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-13" x1="39.94" y1="99.17" x2="76.7" y2="78.4" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c3d1d1"/>
+      <stop offset="1" stop-color="#e9f1f2"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-14" x1="5.01" y1="78.36" x2="41.45" y2="99.45" xlink:href="#linear-gradient-13"/>
+    <linearGradient id="linear-gradient-15" x1="5.78" y1="25.81" x2="5.78" y2="80.27" xlink:href="#linear-gradient-10"/>
+    <linearGradient id="linear-gradient-16" x1="40.66" y1="77.99" x2="70.04" y2="77.99" xlink:href="#linear-gradient-8"/>
+    <linearGradient id="linear-gradient-17" x1="40.66" y1="81.95" x2="70.04" y2="81.95" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#777a7f"/>
+      <stop offset="0.52" stop-color="#50686a"/>
+      <stop offset="1" stop-color="#415756"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-18" x1="11.28" y1="77.99" x2="40.66" y2="77.99" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b1bcbb"/>
+      <stop offset="1" stop-color="#95a6aa"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-19" x1="11.28" y1="81.95" x2="40.66" y2="81.95" xlink:href="#linear-gradient-6"/>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="_5" data-name="5">
+      <g>
+        <g>
+          <g>
+            <g>
+              <polygon points="15.65 103.41 15.6 72.11 65.71 72.11 65.71 103.58 40.66 117.95 15.65 103.41" fill="#17220e"/>
+              <path d="M65.61,72.21v31.31l-25,14.31-25-14.5V72.21H65.61m.2-.2H15.5v31.43l.1.06,25,14.51.1,0,.1,0L65.71,103.7l.1-.06V72Z"/>
+            </g>
+            <polygon points="16.29 102.99 16.29 72.8 65.02 72.8 65.02 103.19 40.66 117.16 16.29 102.99" fill="url(#linear-gradient)"/>
+            <polygon points="40.66 72.8 16.29 72.8 16.29 102.99 40.66 117.16 40.66 117.16 40.66 72.8" fill="url(#linear-gradient-2)"/>
+            <polygon points="17.55 103.72 22.28 106.45 22.28 72.86 17.55 72.86 17.55 103.72" fill="#906200"/>
+            <polygon points="59.12 106.59 63.85 103.86 63.85 72.86 59.12 72.86 59.12 106.59" fill="#714000"/>
+          </g>
+          <g opacity="0.2">
+            <polygon points="15.7 102.33 15.7 103.33 40.66 117.83 65.61 103.52 65.61 102.52 40.66 116.83 15.7 102.33" fill="#17220e"/>
+            <polygon points="15.7 100.33 15.7 101.33 40.66 115.83 65.61 101.52 65.61 100.52 40.66 114.83 15.7 100.33" fill="#17220e"/>
+            <polygon points="15.7 98.33 15.7 99.33 40.66 113.83 65.61 99.52 65.61 98.52 40.66 112.83 15.7 98.33" fill="#17220e"/>
+            <polygon points="15.7 96.33 15.7 97.33 40.66 111.83 65.61 97.52 65.61 96.52 40.66 110.83 15.7 96.33" fill="#17220e"/>
+            <polygon points="15.7 94.33 15.7 95.33 40.66 109.83 65.61 95.52 65.61 94.52 40.66 108.83 15.7 94.33" fill="#17220e"/>
+            <polygon points="15.7 92.33 15.7 93.33 40.66 107.83 65.61 93.52 65.61 92.52 40.66 106.83 15.7 92.33" fill="#17220e"/>
+            <polygon points="15.7 90.33 15.7 91.33 40.66 105.83 65.61 91.52 65.61 90.52 40.66 104.83 15.7 90.33" fill="#17220e"/>
+            <polygon points="15.7 88.33 15.7 89.33 40.66 103.83 65.61 89.52 65.61 88.52 40.66 102.83 15.7 88.33" fill="#17220e"/>
+            <polygon points="15.7 86.33 15.7 87.33 40.66 101.83 65.61 87.52 65.61 86.52 40.66 100.83 15.7 86.33" fill="#17220e"/>
+          </g>
+        </g>
+        <polygon points="15.7 73.52 15.7 92.33 40.66 106.96 65.61 92.52 65.61 73.07 15.7 73.52" fill="#110707" opacity="0.5"/>
+        <polygon points="4.9 79.34 4.9 26.3 40.66 5.66 76.41 26.3 76.41 79.34 40.66 99.98 4.9 79.34" fill="#505d68"/>
+        <polygon points="0.2 82.06 4.9 79.34 4.9 26.3 0.2 23.59 0.2 82.06" fill="url(#linear-gradient-3)"/>
+        <polygon points="81.11 23.59 76.41 26.3 76.41 79.34 81.11 82.06 81.11 23.59" fill="url(#linear-gradient-4)"/>
+        <polygon points="40.66 99.98 40.66 105.41 81.11 82.06 76.41 79.34 40.66 99.98" fill="url(#linear-gradient-5)"/>
+        <polygon points="40.66 105.41 0.2 82.06 4.9 79.34 40.66 99.98 40.66 105.41" fill="url(#linear-gradient-6)"/>
+        <polygon points="81.11 23.59 40.66 0.23 40.66 5.66 76.41 26.3 81.11 23.59" fill="url(#linear-gradient-7)"/>
+        <polygon points="40.66 0.23 40.66 5.66 4.9 26.3 0.2 23.59 40.66 0.23" fill="url(#linear-gradient-8)"/>
+        <polygon points="7.25 77.98 7.25 27.66 40.66 8.37 74.06 27.66 74.06 77.98 40.66 97.27 7.25 77.98" fill="url(#linear-gradient-9)"/>
+        <polygon points="40.66 4.98 40.66 8.37 7.25 27.66 4.31 25.96 40.66 4.98" fill="url(#linear-gradient-10)"/>
+        <polygon points="40.66 4.98 40.66 8.37 74.06 27.66 77 25.96 40.66 4.98" fill="url(#linear-gradient-11)"/>
+        <polygon points="74.06 77.98 77 79.68 77 25.96 74.06 27.66 74.06 77.98" fill="url(#linear-gradient-12)"/>
+        <polygon points="40.66 97.27 40.66 100.66 77 79.68 74.06 77.98 40.66 97.27" fill="url(#linear-gradient-13)"/>
+        <polygon points="7.25 77.98 4.31 79.68 40.66 100.66 40.66 97.27 7.25 77.98" fill="url(#linear-gradient-14)"/>
+        <polygon points="7.25 27.66 4.31 25.96 4.31 79.68 7.25 77.98 7.25 27.66" fill="url(#linear-gradient-15)"/>
+        <path d="M40.66.23,81.11,23.59V82.06L40.66,105.41.2,82.06V23.59L40.66.23m0-.23-.1.06L.1,23.41l-.1.06v58.7l.1.06,40.46,23.36.1,0,.1,0L81.21,82.23l.1-.06V23.47l-.1-.06L40.76.06,40.66,0Z"/>
+        <path d="M40.66,8.6l33.2,19.17v50.1L40.66,97,7.45,77.87V27.77L40.66,8.6m0-.23L7.25,27.66V78L40.66,97.27,74.06,78V27.66L40.66,8.37Z"/>
+        <g>
+          <polygon points="40.66 86.91 11.28 69.95 11.28 76.7 40.66 93.66 70.04 76.7 70.04 69.95 40.66 86.91" fill="#2d1c1b"/>
+          <polygon points="40.66 84.56 40.66 88.38 70.04 71.41 70.04 67.6 40.66 84.56" fill="url(#linear-gradient-16)"/>
+          <polygon points="40.66 88.38 40.66 92.49 70.04 75.53 70.04 71.41 40.66 88.38" fill="url(#linear-gradient-17)"/>
+          <polygon points="40.66 84.56 40.66 88.38 11.28 71.41 11.28 67.6 40.66 84.56" fill="url(#linear-gradient-18)"/>
+          <polygon points="11.28 71.41 11.28 75.53 40.66 92.49 40.66 88.38 11.28 71.41" fill="url(#linear-gradient-19)"/>
+          <path d="M70,67.6v7.92l-29.38,17-29.38-17V67.6l29.38,17L70,67.6m.2-.35-.3.18L40.66,84.33,11.38,67.43l-.3-.18v8.39l.1.06,29.38,17,.1.06.1-.06,29.38-17,.1-.06V67.25Z"/>
+        </g>
+        <g>
+          <polygon points="33.53 48.83 40.66 39.44 47.78 48.83 40.66 58.22 33.53 48.83" fill="#2d1c1b"/>
+          <g>
+            <polygon points="40.66 56.34 33.53 46.95 40.66 37.56 47.78 46.95 40.66 56.34" fill="#95aaab"/>
+            <polygon points="40.66 37.56 40.66 46.95 33.53 46.95 40.66 37.56" fill="#e9f1f2"/>
+            <polygon points="40.66 46.95 40.66 56.34 47.78 46.95 40.66 46.95" fill="#495656"/>
+          </g>
+          <path d="M40.66,37.56,47.78,47l-7.12,9.39L33.54,47l7.12-9.39m0-.33-.16.21-7.12,9.39-.1.12.1.12,7.12,9.39.16.21.16-.21,7.12-9.39L48,47l-.09-.12-7.12-9.39-.16-.21Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg id="leaderboard" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #acafb3;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path id="Path_4" data-name="Path 4" class="cls-1" d="M25.75,4.5H22V3.25A1.25,1.25,0,0,0,20.75,2H8.25A1.25,1.25,0,0,0,7,3.25V4.5H3.25A1.25,1.25,0,0,0,2,5.75V9.5c0,5.388,2.25,8.638,6.025,8.75a7.5,7.5,0,0,0,5.225,3.637V24.5h-2.5V27h7.5V24.5h-2.5V21.888a7.5,7.5,0,0,0,5.225-3.638C24.725,18.125,27,14.875,27,9.5V5.75A1.25,1.25,0,0,0,25.75,4.5ZM4.5,9.5V7H7v8.538C4.775,14.6,4.5,11.125,4.5,9.5ZM22,15.538V7h2.5V9.5C24.5,11.125,24.225,14.6,22,15.538Z" transform="translate(-2 -2)"/>
+  <rect id="Rectangle_23" data-name="Rectangle 23" class="cls-2" width="25" height="24.337"/>
+</svg>
