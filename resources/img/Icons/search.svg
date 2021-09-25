@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #18191b;
+      }
+    </style>
+  </defs>
+  <g id="search" transform="translate(-12.379 -13)">
+    <rect id="Rectangle_41" data-name="Rectangle 41" class="cls-1" width="25" height="25" transform="translate(12.379 13)"/>
+    <path id="Path_2" data-name="Path 2" class="cls-2" d="M11.836,21.671A9.776,9.776,0,0,0,17.855,19.6L23.262,25,25,23.262l-5.4-5.4a9.824,9.824,0,1,0-7.759,3.814Zm0-17.212a7.377,7.377,0,1,1-7.377,7.377A7.384,7.384,0,0,1,11.836,4.459Z" transform="translate(11.517 11.707)"/>
+  </g>
+</svg>

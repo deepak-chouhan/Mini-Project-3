@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #acafb3;
+      }
+    </style>
+  </defs>
+  <g id="logout" transform="translate(-4533 -1015)">
+    <rect id="Rectangle_39" data-name="Rectangle 39" class="cls-1" width="25" height="25" transform="translate(4533 1015)"/>
+    <g id="Group_54" data-name="Group 54">
+      <path id="Path_10" data-name="Path 10" class="cls-2" d="M19.5,14.25v-2.5H8.25V8L2,13l6.25,5V14.25Z" transform="translate(4531 1014.25)"/>
+      <path id="Path_11" data-name="Path 11" class="cls-2" d="M22.75,3H11.5A2.5,2.5,0,0,0,9,5.5v5h2.5v-5H22.75V23H11.5V18H9v5a2.5,2.5,0,0,0,2.5,2.5H22.75a2.5,2.5,0,0,0,2.5-2.5V5.5A2.5,2.5,0,0,0,22.75,3Z" transform="translate(4532.75 1013)"/>
+    </g>
+  </g>
+</svg>
