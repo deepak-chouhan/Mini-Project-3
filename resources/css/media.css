@@ -20,6 +20,15 @@
   width: 60%;
 
 }
+header ul li a{
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 30px 15px;
+  margin-left: 30px;
+}
   }
 
   
@@ -42,6 +51,31 @@
             .compatible .comp-desc .comp-desc-text
             {
             font-size: 17px;
+            }
+            .nav-b
+            {
+              position: fixed;
+              z-index: 11111132222222222212;
+              right: 50px;
+              top:20px;
+              border: none;
+              background-color: #fff;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              display: block;
+            }
+            header .logo
+            {
+              margin-top: 20PX;
+            }
+            header ul
+            {
+              display: none;
+            }
+            .side-nav
+            {
+              z-index: 333333333333333333333;
             }
       }
 
