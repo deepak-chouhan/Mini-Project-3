@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
 *
 {
     margin: 0;
@@ -63,13 +63,16 @@
 }
 .l-nav .content .symbol
 {
-    text-align: center;
-    font-size: 20px;
+    font-size: 25px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 .l-nav .content .symbol span
 {
     padding: 7px 10px;
     background-color:#0E65F3 ;
+    border-radius: 5px;
     color: #F2F5FA;
 }
 .l-nav .content .menu
@@ -79,7 +82,7 @@
 }
 .l-nav .content .menu-head
 {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
 }
 .l-nav .content .menu ul
@@ -100,12 +103,10 @@
     font-size: 18px;
     text-decoration: none;
     color: black;
-    font-weight: 300;
+    font-weight: 400;
     width: 100%;
     opacity: 40%;
     transition: 300ms;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
     background-color: #fff;
     
 }
@@ -133,7 +134,6 @@
     filter: brightness(400%);
 }
 
-
 .r-nav
 {
     position: fixed;
@@ -147,10 +147,12 @@
     transition: 400ms;
     background-color: #fff;
 }
+
 .r-nav .content
 {
     margin: 35px 20px;
 }
+
 .r-nav .content .ranking
 {
     width: 100%;
@@ -158,6 +160,7 @@
     display: grid;
     place-items: center;
     padding: 20px 0;
+    gap: 5px;
 }
 .r-nav .content .ranking img
 {
@@ -173,7 +176,7 @@
     font-weight: 700;
     font-size: 25px;
     color:#C72E34;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: center;
 }
 .r-nav .content .ranking .text .grid
@@ -184,21 +187,25 @@
     grid-column-gap: 20px;
     width: 100%;
 }
+
 .mark
 {
     background-color: black;
     width: 100%;
-    height: 100%;
+    height: 90%;
 }
+
 .r-nav .content .ranking .text .grid .pts,.r-nav .content .ranking .text .grid .rank
 {
     text-align: center;
 }
+
 .r-nav .content .ranking .text .grid .num
 {
     color: #C72E34;
-    font-size: 25px;
+    font-size: 22px;
 }
+
 .r-nav .content .ranking .text .grid .font
 {
     font-size: 15px;
@@ -210,29 +217,28 @@
 }
 .r-nav .content .activity .head
 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
 }
 .r-nav .content .activity .text
 {
-    font-size: 13px;
-    color: rgb(112, 112, 112);
+    font-size: 14px;
+    color: #ACAFB3;
 }
 .r-nav .content .activity .points
 {
     display: flex;
     align-items: center;
     float: right;
+    gap: 5px;
     font-size: 13px;
-    color: rgb(112, 112, 112);
+    color: #ACAFB3;
 }
 .r-nav .content .activity .points img
 {
-    width: 10px;
+    width: 12px;
     height: auto;
 }
-
-
 
 .dashboard
 {
@@ -246,6 +252,9 @@
     width: 100%;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 75px;
     background-color: #fff;
     font-family: 'Roboto', sans-serif;
     padding: 25px 0; 
@@ -296,7 +305,7 @@
     width: 100%;
     height: 55vh;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .wrapper
 {
@@ -310,6 +319,7 @@
 {
     width: 100%;
     background-color: #fff;
+    border-radius: 10px;
 }
 .wrapper .content .area
 {
