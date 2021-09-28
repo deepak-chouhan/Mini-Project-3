@@ -25,12 +25,29 @@ section{
   width: 100%;
   opacity: 80%;
 }
+.glass
+{
+  z-index: 2222;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  height: 80px;
+}
+.sticky
+{
+  background-color: #000;
 
-
+}
 header{
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  z-index: 222222222222;
 }
 
 header .logo{
@@ -38,21 +55,85 @@ header .logo{
   font-size: 28px;
   font-weight: 600;
   color: #fff;
+  z-index: 222222222222;
 }
-
+header ul
+{
+  z-index: 222222222222;
+}
 header ul li{
   display: inline-block;
-  margin: 0 30px;
 }
 
 header ul li a{
+  display: block;
   text-decoration: none;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
+  padding: 30px 15px;
+  margin-left: 50px;
+}
+header ul li a:hover,header ul li .active{
+  border-top: 2.5px white solid;
+}
+header ul li .sign
+{
+  color: #000;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 13px 55px 13px 25px;
+  background-color: #F2F5FA;
 }
 
+header ul li .sign:hover
+{
+  border-top: none;
 
+}
+.nav-b
+{
+  display: none;
+}
+.side-nav
+{
+  position: fixed;
+  top:0;
+  width: 100%;
+  text-align: right;
+  display: grid;
+  place-items: end;
+  z-index: 0;
+}
+.side-nav ul
+{
+  list-style: none;
+  padding: 70px 0;
+  height: calc(100vh-70px);
+  background-color: rgba(88, 88, 88, 0.2);
+  height: 100vh;
+  opacity: 1;
+  width: 0;
+  overflow: hidden;
+  z-index: 111111;
+  transition: 300ms;
+  
+}
+.side-nav ul li
+{
+  margin-top: 30px;
+}
+.side-nav ul li a
+{
+  text-decoration: none;
+  font-size: 20px;
+  transition: 300ms;
+  color: #fff;
+}
+.side-nav ul li a:hover
+{
+  padding-right: 10px;
+}
 .home{
   background-image: linear-gradient(rgba(14, 101, 243, 0.7), rgba(14, 101, 243, 0.7)), url(../img/hero_div_bg.png);
   background-size: 100%;
@@ -60,7 +141,7 @@ header ul li a{
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-  padding: 20px 0;
+  padding: 0;
 
 }
 
@@ -94,6 +175,7 @@ header ul li a{
   position: relative;
   top: 30vh;
   margin-left: 50px;
+  width: 50px;
 
 }
 

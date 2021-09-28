@@ -20,17 +20,30 @@
   <!--HOME-->
   <section class="home">
     <header>
+    <div class="glass" id="top"></div>
       <div class="logo">
         Ai-buddy
       </div>
       <ul>
+        <li><a href="" class="active">Home</a></li>
+        <li><a href="">Features</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Login</a></li>
+        <li><a href="" class="sign">Sign up</a></li>
+      </ul>
+    </header>
+    <div class="side-nav">
+    <button onclick="myFunction()" class="nav-b">=</button>
+      <ul id="list">
         <li><a href="">Home</a></li>
         <li><a href="">Features</a></li>
         <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
         <li><a href="">Login</a></li>
         <li><a href="">Sign up</a></li>
       </ul>
-    </header>
+    </div>
     <div class="content">
       <div class="title">Break Free and Grow</div>
       <div><a href="">Login</a></div>
@@ -180,5 +193,27 @@
     },
   });
 </script>
-
+<script>
+    var val1=false;
+    function myFunction() {
+        if(val1==false)
+        {
+            document.getElementById("list").style.width = "170px";
+            document.getElementById("list").style.opacity = "1";
+            document.getElementById("list").style.padding = "70px 40px";
+            val1=true;
+        }
+        else
+        {
+            document.getElementById("list").style.width = "0px";
+            document.getElementById("list").style.opacity = "0";
+            document.getElementById("list").style.padding = "70px 0";
+            val1=false;
+        }
+}
+window.addEventListener("scroll",function(){
+    var headerr=document.getElementById('top');
+    headerr.classList.toggle("sticky",window.scrollY>0);
+})
+    </script>
 </html>
