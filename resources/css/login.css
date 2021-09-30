@@ -1,0 +1,14 @@
+* {
+    --blue: #0E65F3;
+    --dark: #18191B;
+    --grey: #E1E4E9
+}
+
+.login{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(50px);
+}
