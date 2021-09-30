@@ -12,7 +12,7 @@ body {
   background-color: #F2F5FA;
 }
 
-section{
+section {
   padding: 50px 0;
 }
 
@@ -24,8 +24,8 @@ section{
   width: 100%;
   opacity: 80%;
 }
-.glass
-{
+
+.glass {
   z-index: 2222;
   width: 100%;
   position: fixed;
@@ -35,12 +35,13 @@ section{
   height: 80px;
   transition: all .5s ease;
 }
-.sticky
-{
-  background-color: rgba(0, 0, 0, 0.1);
+
+.sticky {
+  background-color: rgba(14, 101, 243, 0.1);
   backdrop-filter: blur(10px);
 }
-header{
+
+header {
   position: fixed;
   top: 0;
   display: flex;
@@ -50,22 +51,23 @@ header{
   z-index: 222222222222;
 }
 
-header .logo{
+header .logo {
   margin-left: 30px;
   font-size: 28px;
   font-weight: 600;
   color: #fff;
   z-index: 222222222222;
 }
-header ul
-{
+
+header ul {
   z-index: 222222222222;
 }
-header ul li{
+
+header ul li {
   display: inline-block;
 }
 
-header ul li a{
+header ul li a {
   display: block;
   text-decoration: none;
   color: #fff;
@@ -76,66 +78,74 @@ header ul li a{
   border-top: 3px solid rgba(255, 255, 255, 0.0);
   transition: all 0.2s ease-in;
 }
-header ul li a:hover{
+
+header ul li a:hover {
   border-top: 3px solid rgba(255, 255, 255, 1);
 }
-header ul li .sign{
+
+header ul li .sign {
   color: #000;
   font-size: 14px;
   font-weight: 400;
   padding: 16px 65px 16px 35px;
   background-color: #F2F5FA;
   border: none;
+  transition: all .2s ease;
 }
 
-header ul li .sign:hover
-{
-border: none;
+header ul li .sign:hover {
+  border: none;
+  color: #fff;
+  background-color: rgba(14, 101, 243, 0.7);
+  backdrop-filter: blur(10px);
 }
-.nav-b
-{
+
+.nav-b {
   display: none;
 }
-.side-nav
-{
+
+.side-nav {
   position: fixed;
-  top:0;
+  top: 0;
   width: 100%;
-  text-align: right;
+  text-align: left;
   display: grid;
   place-items: end;
   z-index: 0;
 }
-.side-nav ul
-{
+
+.side-nav ul {
   list-style: none;
   padding: 70px 0;
   height: calc(100vh-70px);
-  background-color: rgba(88, 88, 88, 0.2);
+  background-color: rgba(14, 101, 243, 0.7);
   height: 100vh;
   opacity: 1;
   width: 0;
   overflow: hidden;
   z-index: 111111;
   transition: 300ms;
-  
+  backdrop-filter: blur(10px);
+
 }
-.side-nav ul li
-{
-  margin-top: 30px;
+
+.side-nav ul li {
+  margin: 50px 0;
 }
-.side-nav ul li a
-{
+
+.side-nav ul li a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 300;
   transition: 300ms;
   color: #fff;
 }
-.side-nav ul li a:hover
-{
-  padding-right: 10px;
+
+.side-nav ul li a:hover {
+  padding-left: 10px;
 }
-.home{
+
+.home {
   background-image: linear-gradient(rgba(14, 101, 243, 0.7), rgba(14, 101, 243, 0.7)), url(../img/hero_div_bg.png);
   background-size: 100%;
   background-blend-mode: overlay;
@@ -143,7 +153,6 @@ border: none;
   background-position: center;
   height: 100vh;
   padding: 0;
-
 }
 
 .home .content {
@@ -170,10 +179,17 @@ border: none;
   font-size: 15px;
   text-decoration: none;
   font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+.home .content a:hover {
+  border: none;
+  color: #fff;
+  background-color: rgba(14, 101, 243, 0.7);
+  backdrop-filter: blur(10px);
 }
 
 .home .socials {
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -184,7 +200,7 @@ border: none;
 
 }
 
-.bar{
+.bar {
   width: 2px;
   height: 150px;
   background-color: #fff;
@@ -203,6 +219,11 @@ border: none;
   font-size: 14px;
   letter-spacing: 1px;
   font-weight: 300;
+  transition: all 0.2s ease-in-out;
+}
+
+.home .socials a:hover {
+  transform: translateY(-5px);
 }
 
 .heroimg {
@@ -215,7 +236,7 @@ border: none;
   z-index: -1;
 }
 
-.stats-section{
+.stats-section {
   padding: 0;
 }
 
