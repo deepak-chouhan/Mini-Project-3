@@ -1,14 +1,98 @@
 * {
     --blue: #0E65F3;
     --dark: #18191B;
-    --grey: #E1E4E9
+    --grey: #E1E4E9;
+    --light: #fff
 }
 
-.login{
+a {
+    text-decoration: none;
+}
+
+.login {
     position: absolute;
     top: 0;
     right: 50%;
     bottom: 0;
     left: 0;
     backdrop-filter: blur(50px);
+}
+
+.login .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.login .form label {
+    color: var(--light);
+    font-size: 1rem;
+}
+.name,
+.email,
+.password {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.email input,
+.password input,
+.name input {
+    padding: 15px;
+    width: 400px;
+    font-size: 1rem;
+    color: var(--dark);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    outline: none;
+}
+
+.login .form .btn button {
+    font-size: 100%;
+    color: var(--blue);
+    background-color: var(--light);
+    margin-top: 20px;
+    padding: 17px;
+    width: 100%;
+    border: none;
+    transition: all .2s ease;
+}
+
+.login .form .btn button:hover {
+    color: var(--light);
+    background-color: rgba(14, 101, 243, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.login .oAuth {
+    text-align: center;
+    color: var(--light);
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.login .oAuth .social-login {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.login .oAuth .social-login a {
+    color: var(--blue);
+    background-color: var(--light);
+    padding: 15px 0;
+    width: 100%;
+    transition: all .2s ease;
+}
+
+.login .oAuth .social-login a:hover {
+    color: var(--light);
+    background-color: rgba(14, 101, 243, 0.7);
+    backdrop-filter: blur(10px);
 }
