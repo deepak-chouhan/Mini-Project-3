@@ -246,6 +246,7 @@
     margin-right: 325px;
     background-color: #F2F5FA;
     padding: 0 30px 20px 30px;
+    min-height: 100vh;
 }
 .dash-nav
 {
@@ -267,7 +268,6 @@
 .dash-nav .right-part
 {
     float: right;
-    margin-right: 25px;
     display: flex;
     align-items: center;
 }
@@ -398,4 +398,37 @@
     {
         grid-template-columns: 1fr;
     }
+    .dashboard
+    {
+        padding: 0 0px 20px 0px;
+    }
 }
+
+@media only screen and (max-width: 600px)
+{
+    .dashboard .profile
+    {
+        width: 0;
+        overflow: hidden;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .name
+    {
+        font-size: 0;
+    }
+    .dash-nav .right-part
+    {
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 400px)
+{
+    .dash-nav .right-part .search
+    {
+        width: 175px;
+    }
+
+}
+
