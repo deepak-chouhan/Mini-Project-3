@@ -1,0 +1,50 @@
+.vr-wrap
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap:15px ;
+    grid-row-gap: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.vr-card
+{
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.vr-card img
+{
+    height: 100%;
+    width: auto;
+}
+.vr-card .desc
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    transform: translateY(-220px);
+    color: #fff;
+}
+
+
+@media only screen and (max-width: 1000px)
+{
+.vr-wrap
+{
+    grid-template-columns: 1fr 1fr ;
+    padding: 0 30px 20px 30px;
+}
+}
+
+
+@media only screen and (max-width: 500px)
+{
+.vr-wrap
+{
+    grid-template-columns: 1fr ;
+}
+}
