@@ -1,79 +1,87 @@
-.user
-{
+.leaderboards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 9px 10px;
+    padding: 15px 20px;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 15px;
 }
-.user .left-cnt
-{
+
+.user .left-cnt {
     display: flex;
+    gap: 20px;
     align-items: center;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 16px;
 }
-.user .left-cnt span
-{
-    margin-right: 8px;
-}
-.user .left-cnt img
-{
+
+.user .left-cnt img {
     height: 45px;
-    width: auto;
-    margin-right: 10px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 5px;
 }
-.user .right-cnt
-{
-    padding: 13px 8px;
+
+.user .right-cnt {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    padding: 15px 10px;
     background-color: #F2F5FA;
     border-radius: 5px;
 }
-.user .right-cnt .rank
-{
-    margin-right: 25px;
+
+.user .rank {
+    font-size: 1.25rem;
+}
+
+.user .title {
+    font-size: .9rem;
+}
+
+.user .score {
+    font-weight: 600;
+}
+
+.user:first-of-type .rank,
+.user:first-of-type .title,
+.user:first-of-type .score {
+    color: #C72E34;
+}
+
+.user:nth-of-type(2) .rank,
+.user:nth-of-type(2) .title,
+.user:nth-of-type(2) .score {
+    color: #DFA140;
+}
+
+.user:nth-of-type(3) .rank,
+.user:nth-of-type(3) .title,
+.user:nth-of-type(3) .score {
+    color: #0E65F3;
 }
 
 
-#r1
-{
-    color: red;
-}
-#r2
-{
-    color: gold;
-}
-#r3
-{
-    color: blue;
-}
-
-
-
-
-
-@media only screen and (max-width: 800px)
-{
-    .leaderboards
-    {
+@media only screen and (max-width: 800px) {
+    .leaderboards {
         padding: 0 10px;
     }
 }
-@media only screen and (max-width: 500px)
-{
-    .user .left-cnt
-    {
-        font-size: 12px;
+
+@media only screen and (max-width: 500px) {
+    .user .left-cnt {
+        font-size: 14px;
     }
-    .user .left-cnt img
-    {
+
+    .user .left-cnt img {
         height: 35px;
-    }
-    .user .right-cnt
-    {
-        font-size: 10px;
+        width: 35px;
     }
 }
