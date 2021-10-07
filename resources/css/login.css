@@ -30,6 +30,7 @@ a {
     color: var(--light);
     font-size: 1rem;
 }
+
 .name,
 .email,
 .password {
@@ -95,4 +96,32 @@ a {
     color: var(--light);
     background-color: rgba(14, 101, 243, 0.7);
     backdrop-filter: blur(10px);
+}
+
+@media only screen and (max-width:1150px) {
+    .login {
+        right: 0;
+    }
+}
+
+@media only screen and (max-width:540px) {
+    .login {
+        width: 100%;
+    }
+
+    .login .form {
+        width: 80%;
+    }
+
+    .email input,
+    .password input,
+    .name input {
+        padding: 15px;
+        width: auto;
+        font-size: 1rem;
+        color: var(--dark);
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        outline: none;
+    }
 }
