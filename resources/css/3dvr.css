@@ -1,52 +1,66 @@
-.vr-wrap
-{
+.vr-wrap {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap:15px ;
-    grid-row-gap: 15px;
+    gap: 15px;
     font-family: 'Roboto', sans-serif;
     z-index: -1;
 }
-.vr-card
-{
+
+.vr-card {
+    background-color: #fff;
     height: 200px;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    align-items: center;
+    transition: all .3s ease-in;
+    position: relative;
 }
-.vr-card img
-{
+
+.vr-card:hover .filter {
+    opacity: .5;
+}
+
+.vr-card .filter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background-color: #000;
+    opacity: .3;
+    transition: all .2s ease-in;
+}
+
+.vr-card:hover {
+    box-shadow: rgb(0 0 0 / 7%) 0px 0px 20px;
+}
+
+.vr-card img {
+    object-fit: cover;
     height: 100%;
-    width: auto;
-    z-index: -1;
-}
-.vr-card .desc
-{
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    padding: 10px;
-    transform: translateY(-220px);
+    z-index: -2;
+}
+
+.vr-card .desc {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
     color: #fff;
-    z-index: -1;
 }
 
 
-@media only screen and (max-width: 1000px)
-{
-.vr-wrap
-{
-    grid-template-columns: 1fr 1fr ;
-    padding: 0 30px 20px 30px;
-}
+@media only screen and (max-width: 1000px) {
+    .vr-wrap {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 30px 20px 30px;
+    }
 }
 
 
-@media only screen and (max-width: 500px)
-{
-.vr-wrap
-{
-    grid-template-columns: 1fr ;
-}
+@media only screen and (max-width: 500px) {
+    .vr-wrap {
+        grid-template-columns: 1fr;
+    }
 }
