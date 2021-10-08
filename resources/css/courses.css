@@ -1,95 +1,86 @@
-.course-wrap
-{
+.course-wrap {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
+    gap: 15px;
     margin-right: 300px;
     width: 100%;
 }
-.course-wrap .course
-{
+
+.course-wrap .course {
+    text-decoration: none;
+    color: #000;
     background-color: white;
     display: flex;
+    gap: 10px;
     align-items: center;
     flex-direction: column;
     text-align: left;
-    padding: 10px 0;
+    padding: 9px;
     border-radius: 5px;
-    
+
 }
-.course-wrap .course .img-contain
-{
-    overflow: hidden;
-    height: 180px;
-    width: 95%;
-    background-color: rgb(104, 104, 255);
-}
-.course-wrap .course .img-contain img
-{
+
+.course .img-contain {
+    width: 100%;
     height: 100%;
-    width: auto;
+}
+
+.course-wrap .course .img-contain img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
-.course-wrap .course .course-text
-{
-    margin: 10px 0;
+
+.course-wrap .course .course-text {
     font-family: 'Roboto', sans-serif;
-    width: 95%;
 }
-.course-wrap .course .course-text .course-head
-{
-    margin: 5px 0;
+
+.course-wrap .course .course-text .course-head {
+    margin-bottom: 5px;
     font-size: 17px;
     font-weight: 500;
 }
-.course-wrap .course .course-text .publisher
-{
+
+.course-wrap .course .course-text .publisher {
     font-size: 13px;
+    color: #ACAFB3;
 }
 
 
 
-@media only screen and (max-width: 1375px)
-{
-    .course-wrap
-    {
+@media only screen and (max-width: 1375px) {
+    .course-wrap {
         grid-template-columns: 1fr 1fr;
     }
 }
-@media only screen and (max-width: 1200px)
-{
-    .course-wrap
-    {
+
+@media only screen and (max-width: 1200px) {
+    .course-wrap {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
-@media only screen and (max-width: 1000px)
-{
-    .course-wrap
-    {
+
+@media only screen and (max-width: 1000px) {
+    .course-wrap {
         grid-template-columns: 1fr 1fr;
     }
 }
-@media only screen and (max-width: 800px)
-{
-    .course-wrap
-    {
+
+@media only screen and (max-width: 800px) {
+    .course-wrap {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
-@media only screen and (max-width: 700px)
-{
-    .course-wrap
-    {
+
+@media only screen and (max-width: 700px) {
+    .course-wrap {
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 5px;
     }
 }
-@media only screen and (max-width: 400px)
-{
-    .course-wrap
-    {
+
+@media only screen and (max-width: 400px) {
+    .course-wrap {
         grid-template-columns: 1fr;
         grid-column-gap: 5px;
         grid-row-gap: 5px;
