@@ -382,6 +382,10 @@
     {
         display: block;
     }
+    .dash-nav .right-part .search
+    {
+        width: 150px;
+    }
 }
 @media only screen and (max-width: 800px)
 {
@@ -427,11 +431,15 @@
     }
 }
 
-@media only screen and (max-width: 400px)
+@media only screen and (max-width: 460px)
 {
     .dash-nav .right-part .search
     {
-        width: 175px;
+        width: 150px;
+    }
+    .left-part
+    {
+        font-size: 12px;
     }
 
 }
