@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Courses</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="resources\css\dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="resources\css\books.css">
+</head>
+
+<body>
+    <section class="l-nav" id="l-nav">
+        <div class="content">
+            <div class="symbol"><span>AI</span>&nbsp AI-buddy</div>
+            <div class="menu">
+                <div class="menu-head">
+                    Main menu
+                </div>
+                <ul>
+                    <li><a href=""><span><img src="resources\img\Icons\dashboard.svg">Dashboard</span></a></li>
+                    <li><a href=""><span><img src="resources\img\Icons\3dvr.svg">3D vr</span></a></li>
+                    <li><a href=""><span><img src="resources\img\Icons\dashboard.svg">Benchmark</span></a></li>
+                    <li><a href=""><span><img src="resources\img\Icons\reading.svg">Reading</span></a></li>
+                    <li><a href=""><span><img src="resources\img\Icons\courses.svg">Courses</span></a></li>
+                    <li><a href=""><span><img src="resources\img\Icons\leaderboard.svg">Leaderboard</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <button onclick="myFunction()" class="rnavb"></button>
+    <button onclick="myFunction1()" class="lnavb"></button>
+    <section class="r-nav" id="r-nav">
+        <div class="content">
+            Your rank<br><br>
+            <div class="ranking">
+                <img src="resources\img\Badgess\Gold_5.svg">
+                <div class="text">
+                    <div class="head">Legendary</div>
+                    <div class="grid">
+                        <div class="pts">
+                            <div class="num">2211</div>
+                            <div class="font">total rating</div>
+                        </div>
+                        <div class="mark"></div>
+                        <div class="rank">
+                            <div class="num">24351</div>
+                            <div class="font">world rank</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="activity">
+                <div class="head">Recent tasks</div>
+                <div class="recent">
+                    <div class="activity"><span class="text">Completed a task "Benchmark"</span><span
+                            class="points"><img src="resources\img\Icons\task.svg">&nbsp+70</span></div>
+                    <div class="activity"><span class="text">Completed a task "Benchmark"</span><span
+                            class="points"><img src="resources\img\Icons\task.svg">&nbsp+70</span></div>
+                    <div class="activity"><span class="text">Completed a task "Benchmark"</span><span
+                            class="points"><img src="resources\img\Icons\task.svg">&nbsp+70</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="dashboard">
+            <div class="dash-nav">
+                <span class="left-part">Dashboard</span>
+                <span class="right-part">
+                    <div class="search-div"><input type="text" class="search" placeholder="Search..."></div>
+                    <div class="profile">
+                        <div><img src="resources\img\profile\profile.png"></div>
+                        <div>Aryan Raju</div>
+                    </div>
+                </span>
+            </div><br>
+            <div class="books-flex">
+                <div class="book">
+                    <img src="resources\img\horz_scrl_read.png">
+                    <div class="bk-name">
+                        Wizard of askabam
+                    </div>
+                    <div class="bk-auth">
+                        Harry potter
+                    </div>
+                </div>
+                <div class="book">
+                    <img src="resources\img\horz_scrl_read.png">
+                    <div class="bk-name">
+                        Wizard of askabam
+                    </div>
+                    <div class="bk-auth">
+                        Harry potter
+                    </div>
+                </div>
+                <div class="book">
+                    <img src="resources\img\horz_scrl_read.png">
+                    <div class="bk-name">
+                        Wizard of askabam
+                    </div>
+                    <div class="bk-auth">
+                        Harry potter
+                    </div>
+                </div>
+                <div class="book">
+                    <img src="resources\img\horz_scrl_read.png">
+                    <div class="bk-name">
+                        Wizard of askabam
+                    </div>
+                    <div class="bk-auth">
+                        Harry potter
+                    </div>
+                </div>
+                <div class="book">
+                    <img src="resources\img\horz_scrl_read.png">
+                    <div class="bk-name">
+                        Wizard of askabam
+                    </div>
+                    <div class="bk-auth">
+                        Harry potter
+                    </div>
+                </div>
+                <div class="book">
+                    <img src="resources\img\horz_scrl_read.png">
+                    <div class="bk-name">
+                        Wizard of askabam
+                    </div>
+                    <div class="bk-auth">
+                        Harry potter
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+
+<script>
+    var val1 = false;
+    var val2 = false;
+
+    function myFunction() {
+        if (val2 == false) {
+            document.getElementById("r-nav").style.width = "325px";
+            document.getElementById("r-nav").style.opacity = "1";
+            val2 = true;
+        } else {
+            document.getElementById("r-nav").style.width = "0px";
+            document.getElementById("r-nav").style.opacity = "0";
+            val2 = false;
+        }
+    }
+
+    function myFunction1() {
+        if (val1 == false) {
+            document.getElementById("l-nav").style.width = "250px";
+            document.getElementById("l-nav").style.opacity = "1";
+            val1 = true;
+        } else {
+            document.getElementById("l-nav").style.width = "0px";
+            document.getElementById("l-nav").style.opacity = "0";
+            val1 = false;
+        }
+    }
+</script>
+
+</html>
