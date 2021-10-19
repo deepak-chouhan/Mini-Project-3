@@ -443,3 +443,9 @@
     }
 
 }
+@media only screen and (max-width: 400px) 
+    {
+        .dash-nav .right-part .search {
+            display: none;
+        }
+    }
