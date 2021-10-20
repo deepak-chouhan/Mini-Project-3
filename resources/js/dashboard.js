@@ -40,7 +40,7 @@ $(document).ready(() => {
         }
     }
 
-    fetch("/resources/twisters/twisters.json")
+    fetch("./resources/twisters/twisters.json")
         .then(response => response.json())
         .then(data => {
             setTwister(data);
