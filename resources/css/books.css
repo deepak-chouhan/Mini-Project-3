@@ -1,52 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
-.books-flex
-{
+.books-flex {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     font-family: 'Roboto', sans-serif;
+    gap: 20px;
+
 }
-.book
-{
-    margin: 10px;
+
+.book {
+    --width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
 }
-.book img
-{
-    height: 250px;
-    width: 180px;
+
+.book img {
+    max-width: var(--width);
+    height: auto;
 }
-.book .bk-name
-{
-    font-size: 20px;
-    font-weight: 700;
+
+.book-desc{
+    max-width: var(--width);
 }
-.book .bk-auth
-{
-    font-size: 17px;
-    font-weight: 300;
+
+.book .bk-name {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(36, 36, 36);
+}
+
+.book .bk-auth {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(179, 179, 179);
 }
 
 
-@media only screen and (max-width: 1400px)
-{
-    .books-flex
-    {
+@media only screen and (max-width: 1400px) {
+    .books-flex {
         grid-template-columns: 1fr 1fr 1fr;
-    } 
+    }
 }
-@media only screen and (max-width: 900px)
-{
-    .books-flex
-    {
+
+@media only screen and (max-width: 900px) {
+    .books-flex {
         grid-template-columns: 1fr 1fr;
         place-items: center;
-    } 
+    }
 }
-@media only screen and (max-width: 400px)
-{
-    .books-flex
-    {
+
+@media only screen and (max-width: 400px) {
+    .books-flex {
         grid-template-columns: 1fr;
         place-items: center;
-    } 
+    }
 }
