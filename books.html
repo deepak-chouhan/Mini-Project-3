@@ -71,73 +71,82 @@
         </div>
     </section>
 
-        <section class="dashboard">
-            <div class="dash-nav">
-                <span class="left-part">Dashboard</span>
-                <span class="right-part">
-                    <div class="search-div"><input type="text" class="search" placeholder="Search..."></div>
-                    <div class="profile">
-                        <div><img src="resources\img\profile\profile.png"></div>
-                        <div>Aryan Raju</div>
-                    </div>
-                </span>
-            </div><br>
-            <div class="books-flex">
-                <div class="book">
-                    <img src="resources\img\horz_scrl_read.png">
-                    <div class="bk-name">
-                        Wizard of askabam
-                    </div>
-                    <div class="bk-auth">
-                        Harry potter
-                    </div>
+    <section class="dashboard">
+        <div class="dash-nav">
+            <span class="left-part">Dashboard</span>
+            <span class="right-part">
+                <div class="search-div"><input type="text" class="search" placeholder="Search..."></div>
+                <div class="profile">
+                    <div><img src="resources\img\profile\profile.png"></div>
+                    <div>Aryan Raju</div>
                 </div>
-                <div class="book">
-                    <img src="resources\img\horz_scrl_read.png">
+            </span>
+        </div><br>
+        <div class="books-flex">
+
+            <div class="book">
+                <img src="http://ecx.images-amazon.com/images/I/51l6XIoa3rL.jpg">
+                <div class="book-desc">
                     <div class="bk-name">
-                        Wizard of askabam
+                        With Schwarzkopf: Life Lessons of The Bear
                     </div>
                     <div class="bk-auth">
-                        Harry potter
-                    </div>
-                </div>
-                <div class="book">
-                    <img src="resources\img\horz_scrl_read.png">
-                    <div class="bk-name">
-                        Wizard of askabam
-                    </div>
-                    <div class="bk-auth">
-                        Harry potter
-                    </div>
-                </div>
-                <div class="book">
-                    <img src="resources\img\horz_scrl_read.png">
-                    <div class="bk-name">
-                        Wizard of askabam
-                    </div>
-                    <div class="bk-auth">
-                        Harry potter
-                    </div>
-                </div>
-                <div class="book">
-                    <img src="resources\img\horz_scrl_read.png">
-                    <div class="bk-name">
-                        Wizard of askabam
-                    </div>
-                    <div class="bk-auth">
-                        Harry potter
-                    </div>
-                </div>
-                <div class="book">
-                    <img src="resources\img\horz_scrl_read.png">
-                    <div class="bk-name">
-                        Wizard of askabam
-                    </div>
-                    <div class="bk-auth">
-                        Harry potter
+                        Natalie M. Rosinsky
                     </div>
                 </div>
             </div>
+
+            <div class="book">
+                <img src="http://ecx.images-amazon.com/images/I/51l6XIoa3rL.jpg">
+                <div class="book-desc">
+                    <div class="bk-name">
+                        With Schwarzkopf: Life Lessons of The Bear
+                    </div>
+                    <div class="bk-auth">
+                        Natalie M. Rosinsky
+                    </div>
+                </div>
+            </div>
+
+            <div class="book">
+                <img src="http://ecx.images-amazon.com/images/I/51l6XIoa3rL.jpg">
+                <div class="book-desc">
+                    <div class="bk-name">
+                        With Schwarzkopf: Life Lessons of The Bear
+                    </div>
+                    <div class="bk-auth">
+                        Natalie M. Rosinsky
+                    </div>
+                </div>
+            </div>
+
+            <div class="book">
+                <img src="http://ecx.images-amazon.com/images/I/51l6XIoa3rL.jpg">
+                <div class="book-desc">
+                    <div class="bk-name">
+                        With Schwarzkopf: Life Lessons of The Bear
+                    </div>
+                    <div class="bk-auth">
+                        Natalie M. Rosinsky
+                    </div>
+                </div>
+            </div>
+
+            <div class="book">
+                <img src="http://ecx.images-amazon.com/images/I/51l6XIoa3rL.jpg">
+                <div class="book-desc">
+                    <div class="bk-name">
+                        With Schwarzkopf: Life Lessons of The Bear
+                    </div>
+                    <div class="bk-auth">
+                        Natalie M. Rosinsky
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
     </section>
 </body>
 
@@ -168,6 +177,10 @@
             val1 = false;
         }
     }
+
+    // setting book width
+    var $setter = $("#book-img");
+    $(".book-desc").css("max-width", $setter.width() + "px");
 </script>
 
 </html>

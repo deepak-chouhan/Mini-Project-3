@@ -25,8 +25,32 @@ $(document).ready(() => {
 
     setWord();
 
-    // ------------
+    // Setting tongue twister
 
-    
+    const twisterButton = document.getElementById("twister");
+
+    const setTwister = data => {
+        const random = Math.floor(Math.random() * 1200);
+        if (data[random].twister.length <= 200) {
+            document.getElementById("twister-body").innerHTML = data[random].twister;
+            console.log(data[random].twister.length)
+        }
+        else{
+            setTwister(data);
+        }
+    }
+
+    fetch("/resources/twisters/twisters.json")
+        .then(response => response.json())
+        .then(data => {
+            setTwister(data);
+            $(twisterButton).click((e) => {
+                e.preventDefault();
+                setTwister(data);
+            })
+
+        })
+        .catch(error => console.log(error));
+
 
 })
