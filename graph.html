@@ -4,46 +4,51 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    </head>
-    <link rel="stylesheet" href="resources\css\graph.css">
-    <body>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>graph</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
+        integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<link rel="stylesheet" href="resources\css\graph.css">
+
+<body>
     <div class="graph">
-<canvas id="myChart" width="400" height="400"></canvas>
-</div>
-<script>
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['6th', '5th', '4th', '3rd', '2nd', '1st'],
-        datasets: [{
-            label: 'rating',
-            data: [123, 193, 183, 215, 221, 311],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
+        <canvas id="myChart"></canvas>
+    </div>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['6th', '5th', '4th', '3rd', '2nd', '1st'],
+                datasets: [{
+                    label: 'rating',
+                    data: [123, 193, 183, 215, 221, 311],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
             }
-        }
-    }
-});
-</script>
- 
-    </body>
+        });
+    </script>
+
+</body>
+
 </html>

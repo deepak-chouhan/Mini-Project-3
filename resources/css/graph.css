@@ -1,5 +1,10 @@
 .graph
 {
-    height:200px;
-    width:100%;
+    width: auto;
+    height: 200px;
+}
+
+canvas{
+    width: 100%;
+    height: auto;
 }

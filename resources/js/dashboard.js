@@ -34,8 +34,7 @@ $(document).ready(() => {
         if (data[random].twister.length <= 200) {
             document.getElementById("twister-body").innerHTML = data[random].twister;
             console.log(data[random].twister.length)
-        }
-        else{
+        } else {
             setTwister(data);
         }
     }
@@ -52,5 +51,16 @@ $(document).ready(() => {
         })
         .catch(error => console.log(error));
 
+    const url = "https://raw.githubusercontent.com/deepak-chouhan/Mini-Project-3/main/resources/twisters/twisters.json";
+
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('GET', url, false);
+    xhttp.send(null);
+
+    console.log(xhttp.responseText)
+
+    // let resp_s = JSON.parse(xhttp.responseText)
+    // console.log(resp_s)
 
 })
