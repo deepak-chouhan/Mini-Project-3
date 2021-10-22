@@ -12,7 +12,12 @@
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="resources\css\graph.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
+        integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -82,13 +87,18 @@
                 </div>
             </span>
         </div><br>
+
         <div class="dash-graph">
+            <div class="graph">
+                <canvas id="myChart"></canvas>
+            </div>
         </div>
         <div class="wrapper">
             <div class="content">
                 <div class="area">
                     <div class="heading">Tongue Twister</div>
-                    <div id="twister-body" class="text">It is a long established fact that a reader will be distracted by the readable
+                    <div id="twister-body" class="text">It is a long established fact that a reader will be distracted
+                        by the readable
                         content of a page when looking at its layout.</div>
                     <div id="twister" class="button"><button>more</button></div>
                 </div>
@@ -136,6 +146,58 @@
         }
     }
 </script>
+
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['6th', '5th', '4th', '3rd', '2nd', '1st'],
+            datasets: [{
+                label: 'rating',
+                data: [123, 193, 183, 215, 221, 311],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+        }
+    });
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Chart.js Line Chart'
+                }
+            }
+        },
+    };
+</script>
+
 <script src="resources/js/dashboard.js"></script>
 
 </html>

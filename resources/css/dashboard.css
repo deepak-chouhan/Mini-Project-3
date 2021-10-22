@@ -297,9 +297,19 @@
 
 .dash-graph {
     width: 100%;
-    height: 55vh;
+    height: 65vh;
     background-color: #fff;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.dash-graph .graph{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    width: 97%;
+    height: 97%;
 }
 
 .wrapper {
