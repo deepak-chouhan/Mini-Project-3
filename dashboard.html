@@ -149,13 +149,18 @@
 
 <script>
     var ctx = document.getElementById('myChart').getContext('2d');
+
+    const labels = Utils.months({count: 7});
+
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['6th', '5th', '4th', '3rd', '2nd', '1st'],
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
+                'October', 'November', 'December'
+            ],
             datasets: [{
                 label: 'rating',
-                data: [123, 193, 183, 215, 221, 311],
+                data: [123, 193, 183, 215, 221, 311, 500, 1000, 400, 340, 555, 566, 676, 800, 354],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)'
                 ],
