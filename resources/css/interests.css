@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    --blue: #0E65F3;
+    --dark: #18191B;
+    --grey: #E1E4E9;
+    --light: #fff;
+    --bg: #F2F5FA;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg);
+}
+
+.interests {}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(1fr, auto);
+}
+
+.wrapper label {
+    cursor: pointer;
+}
+
+.wrapper label span {
+    display: inline-block;
+    position: relative;
+    padding: 13px 25px;
+    background: transparent;
+    border: 1px solid var(--blue);
+    border-radius: 500px;
+    user-select: none;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.wrapper label input[type="checkbox"] {
+    display: none;
+}
+
+.wrapper label input[type="checkbox"]:checked~span {
+    background: var(--blue);
+    color: var(--light);
+}
+
+.next {
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+}
+
+.next button {
+    border: none;
+    background: var(--blue);
+    color: var(--light);
+    padding: 1rem 2.5rem;
+    border-radius: 500px;
+}
