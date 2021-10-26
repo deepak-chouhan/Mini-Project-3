@@ -17,7 +17,16 @@ body {
     background-color: var(--bg);
 }
 
-.interests {}
+.heading {
+    margin-top: 100px;
+}
+
+.heading h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--dark);
+    text-align: center;
+}
 
 .wrapper {
     position: absolute;
@@ -28,7 +37,6 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    grid-auto-rows: minmax(1fr, auto);
 }
 
 .wrapper label {
@@ -44,7 +52,7 @@ body {
     border-radius: 500px;
     user-select: none;
     overflow: hidden;
-    transition: .5s;
+    transition: .3s;
 }
 
 .wrapper label input[type="checkbox"] {
@@ -66,6 +74,32 @@ body {
     border: none;
     background: var(--blue);
     color: var(--light);
-    padding: 1rem 2.5rem;
-    border-radius: 500px;
+    padding: 0.7rem 2.5rem;
+    font-size: 1rem;
+    transition: .2s;
+}
+
+.next button:hover {
+    background: #0d5bd8;
+}
+
+@media only screen and (max-width:768px) {
+    .heading h3 {
+        font-size: 1.7rem;
+    }
+}
+
+@media only screen and (max-width:480px) {
+
+    .heading h3 {
+        font-size: 1.7rem;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+
 }
