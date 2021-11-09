@@ -45,20 +45,20 @@
           <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
         </svg></button>
       <ul id="list">
-        <li><a href="">Home</a></li>
-        <li><a href="">Sign up</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/signup">Sign up</a></li>
       </ul>
     </div>
 
     <div class="login">
-      <div class="form">
+      <form method="POST" action="/login" class="form">
         <div class="email">
           <label for="email">Email</label>
           <input type="email" name="email" id="email">
         </div>
         <div class="password">
           <label for="password">Password</label>
-          <input type="email" name="password" id="password">
+          <input type="password" name="password" id="password">
         </div>
         <div class="btn">
           <button type="submit">Login</button>
@@ -66,11 +66,11 @@
         <div class="oAuth">
           <div>or Login with</div>
           <div class="social-login">
-            <a href="#" class="google">Google</a>
-            <a href="#" class="facebook">Facebook</a>
+            <a href="/auth/google" class="google">Google</a>
+            <a href="/auth/facebook" class="facebook">Facebook</a>
           </div>
         </div>
-      </div>
+      </form>
     </div>
 
     <div class="socials">

@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./resources/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./resources/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./resources/favicons/favicon-16x16.png">
-    <link rel="manifest" href="./resources/favicons/site.webmanifest">
-    <link rel="mask-icon" href="./resources/favicons/safari-pinned-tab.svg" color="#0e65f3">
-    <link rel="shortcut icon" href="./resources/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/resources/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/resources/favicons/safari-pinned-tab.svg" color="#0e65f3">
+    <link rel="shortcut icon" href="/resources/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#0e65f3">
-    <meta name="msapplication-config" content="./resources/favicons/browserconfig.xml">
+    <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
     <meta name="theme-color" content="#0e65f3">
 
-    <link rel="stylesheet" href="./resources/css/interests.css">
+    <link rel="stylesheet" href="/resources/css/interests.css">
     <title>Choose interests</title>
 </head>
 
@@ -27,30 +27,12 @@
         </div>
         <form action="" method="post">
             <div class="wrapper">
+                <% for(interest of interests){ %>
                 <label>
-                    <input type="checkbox" name="Technology">
-                    <span id="">Technology</span>
+                    <input type="checkbox" value="<%= interest %>" name="interest">
+                    <span id=""><%= interest %> </span>
                 </label>
-                <label>
-                    <input type="checkbox" name="Technology">
-                    <span id="">Technology</span>
-                </label>
-                <label>
-                    <input type="checkbox" name="Technology">
-                    <span id="">Skill</span>
-                </label>
-                <label>
-                    <input type="checkbox" name="Technology">
-                    <span id="">Technology</span>
-                </label>
-                <label>
-                    <input type="checkbox" name="Technology">
-                    <span id="">Technology</span>
-                </label>
-                <label>
-                    <input type="checkbox" name="Technology">
-                    <span id="">Art</span>
-                </label>
+                <% } %>
             </div>
             <div class="next">
                 <button type="submit">Next</button>

@@ -35,8 +35,8 @@
         Ai-buddy
       </div>
       <ul>
-        <li><a href="" class="active">Home</a></li>
-        <li><a href="" class="sign">Sign up</a></li>
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/login" class="sign">Login</a></li>
       </ul>
     </header>
     <div class="side-nav">
@@ -45,24 +45,24 @@
           <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
         </svg></button>
       <ul id="list">
-        <li><a href="">Home</a></li>
-        <li><a href="">Sign up</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/login">Login</a></li>
       </ul>
     </div>
 
     <div class="login">
-      <div class="form">
+      <form method="POST" action="/signup" class="form">
         <div class="name">
           <label for="name">Name</label>
           <input type="text" name="name" id="name">
         </div>
         <div class="email">
           <label for="email">Email</label>
-          <input type="email" name="email" id="email">
+          <input type="email" name="username" id="email">
         </div>
         <div class="password">
           <label for="password">Password</label>
-          <input type="email" name="password" id="password">
+          <input type="password" name="password" id="password">
         </div>
         <div class="btn">
           <button type="submit">Sign up</button>
@@ -70,11 +70,11 @@
         <div class="oAuth">
           <div>or Login with</div>
           <div class="social-login">
-            <a href="#" class="sign">Google</a>
-            <a href="#" class="sign">Facebook</a>
+            <a href="/auth/google" class="sign">Google</a>
+            <a href="/auth/facebook" class="sign">Facebook</a>
           </div>
         </div>
-      </div>
+      </form>
     </div>
 
     <div class="socials">

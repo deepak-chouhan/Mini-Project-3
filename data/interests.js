@@ -1,0 +1,32 @@
+const interests = [
+    "Engineering& Transportation",
+    "Christian",
+    "Science",
+    "Self-Help",
+    "Teen& Young Adult",
+    "Reference",
+    "Comics& Graphic Novels",
+    "History",
+    "Romance",
+    "Parenting& Relationships",
+    "Arts& Photography",
+    "Test",
+    "Computers& Technology",
+    "Law",
+    "Humor& Entertainment",
+    "Literature& Fiction",
+    "Religion& Spirituality",
+    "Crafts,Hobbies & Home",
+    "Politics& Social Sciences",
+    "Cookbooks,Food & Wine",
+    "Business& Money",
+    "Travel",
+    "Science& Math",
+    "Medical",
+    "Health,Fitness & Dieting",
+    "Sports& Outdoors",
+    "Mystery,Thriller & Suspense",
+    "Biographies& Memoirs"
+]
+
+module.exports = interests

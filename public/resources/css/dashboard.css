@@ -188,9 +188,13 @@
     width: 100%;
 }
 
+.unranked {
+    color: #aeb2b8;
+}
+
 .mark {
     background-color: black;
-    width: 100%;
+    width: 1px;
     height: 90%;
 }
 
@@ -222,6 +226,8 @@
     color: #ACAFB3;
 }
 
+
+
 .r-nav .content .activity .points {
     display: flex;
     align-items: center;
@@ -229,6 +235,17 @@
     gap: 5px;
     font-size: 13px;
     color: #ACAFB3;
+}
+
+.r-nav .content .activity .no-activity {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.r-nav .content .activity .no-activity .none {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #dee2e9;
 }
 
 .r-nav .content .activity .points img {
@@ -286,13 +303,14 @@
     align-items: center;
     margin-right: 25px;
     margin-left: 30px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .dash-nav .right-part .profile img {
-    height: 30px;
+    height: 40px;
     width: auto;
     margin-right: 10px;
+    border-radius: 500px;
 }
 
 .dash-graph {
@@ -304,7 +322,7 @@
     align-items: center;
 }
 
-.dash-graph .graph{
+.dash-graph .graph {
     margin: auto;
     display: flex;
     align-items: center;
@@ -344,7 +362,7 @@
 
 }
 
-.wrapper .content .area .word{
+.wrapper .content .area .word {
     margin-bottom: 5px;
     color: #0E65F3;
 }
@@ -366,7 +384,7 @@
     transition: all .2s ease;
 }
 
-.wrapper .content .area .button button:hover{
+.wrapper .content .area .button button:hover {
     font-size: 1rem;
     padding: 7px 14px;
     border: none;
@@ -453,9 +471,9 @@
     }
 
 }
-@media only screen and (max-width: 400px) 
-    {
-        .dash-nav .right-part .search {
-            display: none;
-        }
+
+@media only screen and (max-width: 400px) {
+    .dash-nav .right-part .search {
+        display: none;
     }
+}

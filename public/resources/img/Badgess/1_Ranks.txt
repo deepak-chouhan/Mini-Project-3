@@ -1,5 +1,5 @@
-Iron
-Bronze
-Silver
-Platinum
-Gold
+Iron -> Rookie
+Bronze -> Novice
+Silver -> Expert
+Platinum -> Master
+Gold -> Legendry

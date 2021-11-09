@@ -39,7 +39,7 @@ $(document).ready(() => {
         }
     }
 
-    fetch("./resources/twisters/twisters.json")
+    fetch("/resources/twisters/twisters.json")
         .then(response => response.json())
         .then(data => {
             setTwister(data);
@@ -57,10 +57,4 @@ $(document).ready(() => {
     var xhttp = new XMLHttpRequest();
     xhttp.open('GET', url, false);
     xhttp.send(null);
-
-    console.log(xhttp.responseText)
-
-    // let resp_s = JSON.parse(xhttp.responseText)
-    // console.log(resp_s)
-
 })

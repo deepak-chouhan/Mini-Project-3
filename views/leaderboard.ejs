@@ -5,25 +5,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./resources/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./resources/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./resources/favicons/favicon-16x16.png">
-    <link rel="manifest" href="./resources/favicons/site.webmanifest">
-    <link rel="mask-icon" href="./resources/favicons/safari-pinned-tab.svg" color="#0e65f3">
-    <link rel="shortcut icon" href="./resources/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/resources/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/resources/favicons/safari-pinned-tab.svg" color="#0e65f3">
+    <link rel="shortcut icon" href="/resources/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#0e65f3">
-    <meta name="msapplication-config" content="./resources/favicons/browserconfig.xml">
+    <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
     <meta name="theme-color" content="#0e65f3">
 
     <title>3DVR</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="resources\css\dashboard.css">
+    <link rel="stylesheet" href="/resources\css\dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="resources\css\leaderboard.css" />
+    <link rel="stylesheet" href="/resources\css\leaderboard.css" />
 </head>
 
 <body>
@@ -35,12 +35,13 @@
                     Main menu
                 </div>
                 <ul>
-                    <li><a href=""><span><img src="resources\img\Icons\dashboard.svg">Dashboard</span></a></li>
-                    <li><a href=""><span><img src="resources\img\Icons\3dvr.svg">3D vr</span></a></li>
-                    <li><a href=""><span><img src="resources\img\Icons\dashboard.svg">Benchmark</span></a></li>
-                    <li><a href=""><span><img src="resources\img\Icons\reading.svg">Reading</span></a></li>
-                    <li><a href=""><span><img src="resources\img\Icons\courses.svg">Courses</span></a></li>
-                    <li><a href=""><span><img src="resources\img\Icons\leaderboard.svg">Leaderboard</span></a></li>
+                    <li><a href="/user/dashboard"><span><img src="/resources\img\Icons\dashboard.svg">Dashboard</span></a></li>
+                    <li><a href="/user/dashboard/3dvr"><span><img src="/resources\img\Icons\3dvr.svg">3D vr</span></a></li>
+                    <li><a href="/user/dashboard/benchmark"><span><img src="/resources\img\Icons\dashboard.svg">Benchmark</span></a></li>
+                    <li><a href="/user/dashboard/reading"><span><img src="/resources\img\Icons\reading.svg">Reading</span></a></li>
+                    <li><a href="/user/dashboard/courses"><span><img src="/resources\img\Icons\courses.svg">Courses</span></a></li>
+                    <li><a href="/user/dashboard/leaderboard"><span><img src="/resources\img\Icons\leaderboard.svg">Leaderboard</span></a></li>
+                    <li><a href="/logout"><span><img src="/resources\img\Icons\logout.svg">Logout</span></a></li>
                 </ul>
             </div>
         </div>
@@ -52,18 +53,31 @@
         <div class="content">
             Your rank<br><br>
             <div class="ranking">
-                <img src="resources\img\Badgess\Gold_5.svg">
+                <img src="/resources\img\Badgess\Gold_5.svg">
                 <div class="text">
                     <div class="head">Legendary</div>
                     <div class="grid">
                         <div class="pts">
-                            <div class="num">2211</div>
+                            <% if(user.rank != 0){ %>
+                            <div class="num"><%= user.rating %> </div>
                             <div class="font">total rating</div>
+                            <% } else{%>
+                            <div class="unranked">
+                                unranked
+                            </div>
+                            <% } %>
                         </div>
                         <div class="mark"></div>
                         <div class="rank">
-                            <div class="num">24351</div>
+                            <% if(user.rank != 0){ %>
+                            <div class="num"><%= user.rank %> </div>
                             <div class="font">world rank</div>
+                            <% } else{%>
+                            <div class="unranked">
+                                unranked
+                            </div>
+                            <% } %>
+
                         </div>
                     </div>
                 </div>
@@ -71,12 +85,16 @@
             <div class="activity">
                 <div class="head">Recent tasks</div>
                 <div class="recent">
-                    <div class="activity"><span class="text">Completed a task "Benchmark"</span><span
-                            class="points"><img src="resources\img\Icons\task.svg">&nbsp+70</span></div>
-                    <div class="activity"><span class="text">Completed a task "Benchmark"</span><span
-                            class="points"><img src="resources\img\Icons\task.svg">&nbsp+70</span></div>
-                    <div class="activity"><span class="text">Completed a task "Benchmark"</span><span
-                            class="points"><img src="resources\img\Icons\task.svg">&nbsp+70</span></div>
+                    <% if(user.recent.length != 0){%>
+                    <div class="activity">
+                        <span class="text">Completed a task "Benchmark"</span>
+                        <span class="points"><img src="/resources\img\Icons\task.svg">&nbsp+70</span>
+                    </div>
+                    <% }else{ %>
+                    <div class="no-activity">
+                        <span class="none">No activity</span>
+                    </div>
+                    <% } %>
                 </div>
             </div>
         </div>
@@ -84,12 +102,12 @@
 
     <section class="dashboard">
         <div class="dash-nav">
-            <span class="left-part">3D VR</span>
+            <span class="left-part">Leaderboard</span>
             <span class="right-part">
                 <div class="search-div"><input type="text" class="search" placeholder="Search..."></div>
                 <div class="profile">
-                    <div><img src="resources\img\profile\profile.png"></div>
-                    <div class="name">Aryan Raju</div>
+                    <img src="<%= user.profile %>">
+                    <div><%= user.name %> </div>
                 </div>
             </span>
         </div>

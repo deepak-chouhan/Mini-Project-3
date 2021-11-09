@@ -17,7 +17,10 @@ body {
     background-color: var(--bg);
 }
 
-.heading {
+.interests{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     margin-top: 100px;
 }
 
@@ -29,18 +32,15 @@ body {
 }
 
 .wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .wrapper label {
     cursor: pointer;
+    display: inline-block;
+    margin: 5px;
 }
 
 .wrapper label span {
@@ -84,9 +84,18 @@ body {
 }
 
 @media only screen and (max-width:768px) {
+    .interests{
+        margin-top: 20px;
+    }
+
     .heading h3 {
         font-size: 1.7rem;
     }
+
+    .wrapper label span {
+        padding: 10px 20px;
+    }
+
 }
 
 @media only screen and (max-width:480px) {
@@ -95,11 +104,14 @@ body {
         font-size: 1.7rem;
     }
 
-    .wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+    .wrapper label span {
+        font-size: 14px;
     }
 
+    .next {
+        position: absolute;
+        bottom: 20px;
+        right: 50px;
+    }
 
 }
