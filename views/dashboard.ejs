@@ -64,18 +64,26 @@
         </div>
     </section>
 
-    <button onclick="myFunction()" class="rnavb"></button>
-    <button onclick="myFunction1()" class="lnavb"></button>
+    <button onclick="myFunction1()" class="lnavb"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+            viewBox="0 0 24 24" style="fill: #fff">
+            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+        </svg></button>
+
+    <button onclick="myFunction()" class="rnavb"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+            viewBox="0 0 24 24" style="fill:#fff">
+            <path d="m4.431 12.822 13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645z"></path>
+        </svg></button>
+
     <section class="r-nav" id="r-nav">
         <div class="content">
             Your rank<br><br>
             <div class="ranking">
-                <img src="/resources\img\Badgess\unranked.svg">
+                <img src="/resources/img/badges/<%= badge.badge %>.svg">
                 <div class="text">
-                    <div class="head">unranked</div>
+                    <div class="head"><%= badge.title %></div>
                     <div class="grid">
                         <div class="pts">
-                            <% if(user.rank != 0){ %>
+                            <% if(user.rating != 1000){ %>
                             <div class="num"><%= user.rating %> </div>
                             <div class="font">total rating</div>
                             <% } else{%>
@@ -86,7 +94,7 @@
                         </div>
                         <div class="mark"></div>
                         <div class="rank">
-                            <% if(user.rank != 0){ %>
+                            <% if(user.rank != 0 && user.rating != 1000){ %>
                             <div class="num"><%= user.rank %> </div>
                             <div class="font">world rank</div>
                             <% } else{%>
@@ -159,6 +167,7 @@
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script>
     var val1 = false;
     var val2 = false;
