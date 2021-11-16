@@ -267,9 +267,11 @@ app.route("/user/dashboard/:page").get((req, res) => {
                     break;
 
                 case "reading":
-                    let userInterest = "example";
+                    let randomNum = Math.floor(Math.random() * user.interests.length);
+                    let userInterest = user.interests[randomNum];
+                    console.log(userInterest);
+
                     let url = `https://gnews.io/api/v4/search?q=${userInterest}&token=${process.env.NEWS}`;
-                    let blogs = [];
                     axios
                         .get(url)
                         .then(resp => {
@@ -283,7 +285,7 @@ app.route("/user/dashboard/:page").get((req, res) => {
                             console.log(err)
                         })
 
-                    
+
                     break;
 
                 case "courses":

@@ -118,7 +118,7 @@
         <div class="dash-nav">
             <span class="left-part">Reading</span>
             <span class="right-part">
-                <div class="search-div"><input type="text" class="search" placeholder="Search..."></div>
+                <!-- <div class="search-div"><input type="text" class="search" placeholder="Search..."></div> -->
                 <div class="profile">
                     <img src="<%= user.profile %>">
                     <div><%= user.name %> </div>
@@ -128,67 +128,15 @@
         <br>
         <div class="books-flex">
 
-            <div class="book">
-                <img src="http://ecx.images-amazon.com/images/I/51l6XIoa3rL.jpg">
+            <% for(article of articles){ %> 
+            <a href="<%= article.url %> " class="book">
+                <img src="<%= article.image %> ">
                 <div class="book-desc">
-                    <div class="bk-name">
-                        With Schwarzkopf: Life Lessons of The Bear
-                    </div>
-                    <div class="bk-auth">
-                        Natalie M. Rosinsky
-                    </div>
+                    <div class="bk-name"><%= article.title %></div>
+                    <div class="bk-auth"><%= article.description %> </div>
                 </div>
-            </div>
-
-            <div class="book">
-                <img src="http://ecx.images-amazon.com/images/I/51l6XIoa3rL.jpg">
-                <div class="book-desc">
-                    <div class="bk-name">
-                        With Schwarzkopf: Life Lessons of The Bear
-                    </div>
-                    <div class="bk-auth">
-                        Natalie M. Rosinsky
-                    </div>
-                </div>
-            </div>
-
-            <div class="book">
-                <img src="http://ecx.images-amazon.com/images/I/51l6XIoa3rL.jpg">
-                <div class="book-desc">
-                    <div class="bk-name">
-                        With Schwarzkopf: Life Lessons of The Bear
-                    </div>
-                    <div class="bk-auth">
-                        Natalie M. Rosinsky
-                    </div>
-                </div>
-            </div>
-
-            <div class="book">
-                <img src="http://ecx.images-amazon.com/images/I/51l6XIoa3rL.jpg">
-                <div class="book-desc">
-                    <div class="bk-name">
-                        With Schwarzkopf: Life Lessons of The Bear
-                    </div>
-                    <div class="bk-auth">
-                        Natalie M. Rosinsky
-                    </div>
-                </div>
-            </div>
-
-            <div class="book">
-                <img src="http://ecx.images-amazon.com/images/I/51l6XIoa3rL.jpg">
-                <div class="book-desc">
-                    <div class="bk-name">
-                        With Schwarzkopf: Life Lessons of The Bear
-                    </div>
-                    <div class="bk-auth">
-                        Natalie M. Rosinsky
-                    </div>
-                </div>
-            </div>
-
-
+            </a>
+            <% } %> 
 
         </div>
     </section>
