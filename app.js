@@ -1,3 +1,4 @@
+// Libraries we are using
 require("dotenv").config();
 const fs = require("fs");
 const https = require("https");
@@ -12,6 +13,7 @@ const findOrCreate = require("mongoose-findorcreate");
 const FacebookStrategy = require("passport-facebook").Strategy;
 const cron = require("node-cron");
 const axios = require("axios");
+const multer = require("multer");
 
 // Data
 const interests = require("./data/interests");
@@ -56,6 +58,22 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Multure setup
+
+const filestorage = multer.memoryStorage({
+    destination: (req, file, cb) => {
+        cb(null, "./audio");
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + "__" + file.originalname);
+    }
+})
+
+const upload = multer({
+    storage: filestorage
+});
+
+
 // Mongoose
 mongoose.connect(`mongodb://localhost:27017/ally`, {
     useNewUrlParser: true,
@@ -76,6 +94,10 @@ const userschema = new mongoose.Schema({
     rating: {
         type: Number,
         default: 1000,
+    },
+    title: {
+        type: String,
+        default: "unranked"
     },
     recent: [],
     interests: [],
@@ -152,7 +174,7 @@ passport.use(
                     username: profile.emails[0].value,
                     googleId: profile.id,
                     name: profile.name.givenName + " " + profile.name.familyName,
-                    profile: profile.photos[0].value,
+                    profile: profile.photos[0].value.replace("-c", " ").trim(),
                 },
                 function (err, user) {
                     return cb(err, user);
@@ -246,71 +268,106 @@ app.route("/user/dashboard").get((req, res) => {
     }
 });
 
-app.route("/user/dashboard/:page").get((req, res) => {
-    if (req.isAuthenticated()) {
-        User.findById(req.user.id, (err, user) => {
-            let route = req.params.page;
-            let badge = getBadge(user.rating);
-            switch (route) {
-                case "3dvr":
-                    res.render("3dvr", {
-                        user: user,
-                        badge: badge,
-                    });
-                    break;
+app.route("/user/dashboard/:page")
+    .get((req, res) => {
+        if (req.isAuthenticated()) {
+            User.findById(req.user.id, (err, user) => {
+                let route = req.params.page;
+                let badge = getBadge(user.rating);
+                switch (route) {
+                    case "3dvr":
+                        res.render("3dvr", {
+                            user: user,
+                            badge: badge,
+                        });
+                        break;
 
-                case "benchmark":
-                    res.render("benchmark", {
-                        user: user,
-                        badge: badge,
-                    });
-                    break;
+                    case "benchmark":
+                        res.render("benchmark", {
+                            user: user,
+                            badge: badge,
+                        });
+                        break;
 
-                case "reading":
-                    let randomNum = Math.floor(Math.random() * user.interests.length);
-                    let userInterest = user.interests[randomNum];
-                    console.log(userInterest);
+                    case "reading":
+                        let randomNum = Math.floor(Math.random() * user.interests.length);
+                        let userInterest = user.interests[randomNum];
+                        console.log(userInterest);
 
-                    let url = `https://gnews.io/api/v4/search?q=${userInterest}&token=${process.env.NEWS}`;
-                    axios
-                        .get(url)
-                        .then(resp => {
-                            res.render("reading", {
+                        let url = `https://gnews.io/api/v4/search?q=${userInterest}&token=${process.env.NEWS}`;
+                        axios
+                            .get(url)
+                            .then(resp => {
+                                res.render("reading", {
+                                    user: user,
+                                    badge: badge,
+                                    articles: resp.data.articles
+                                });
+                            })
+                            .catch(err => {
+                                console.log(err)
+                            })
+
+
+                        break;
+
+                    case "courses":
+                        let random_course = getCourses();
+                        res.render("courses", {
+                            user: user,
+                            badge: badge,
+                            courses: random_course
+                        });
+                        break;
+
+                    case "leaderboard":
+                        User.find({}, (err, items) => {
+                            users = items.sort((a, b) =>
+                                a.rank > b.rank ? 1 : b.rank > a.rank ? -1 : 0
+                            ).slice(0, 10);
+
+                            res.render("leaderboard", {
                                 user: user,
                                 badge: badge,
-                                articles: resp.data.articles
+                                users: users
                             });
                         })
-                        .catch(err => {
-                            console.log(err)
-                        })
+                        break;
+                }
+            });
+        }
+    })
 
+app.post("/user/dashboard/benchmark", upload.single("audio"), (req, res) => {
 
-                    break;
+    if (req.isAuthenticated()) {
 
-                case "courses":
-                    res.render("courses", {
-                        user: user,
-                        badge: badge,
-                    });
-                    break;
+        const file = req.file
 
-                case "leaderboard":
-                    res.render("leaderboard", {
-                        user: user,
-                        badge: badge,
-                    });
-                    break;
-            }
-        });
+        let rating = 50;
+
+        // Add new activity
+        const activity = new Activity({
+            name: "Benchmark",
+            points: rating
+        })
+
+        User.findById(req.user.id, (err, foundUsers) => {
+            foundUsers.rating += rating;
+            foundUsers.recent.push(activity);
+
+            foundUsers.save();
+        })
+
+        res.redirect("/user/dashboard/benchmark")
     }
-});
+
+})
 
 app.route("/login")
     .get((req, res) => {
         res.render("login");
     })
-
     .post((req, res) => {
         const user = {
             username: req.body.username,
@@ -335,7 +392,6 @@ app.route("/signup")
     .get((req, res) => {
         res.render("signup");
     })
-
     .post((req, res) => {
         const user = new User({
             name: req.body.name,
@@ -343,7 +399,6 @@ app.route("/signup")
         });
 
         User.register(user, req.body.password, (err, user) => {
-            //console.log("inside register")
 
             if (!err) {
                 //console.log("no error")
@@ -364,13 +419,11 @@ app.get("/logout", (req, res) => {
 });
 
 // Test routes
-
 app.get("/graph", (req, res) => {
     res.render("graph");
 });
 
 const getBlogs = require("./helper/reading")
-
 app.get("/news", (req, res) => {
     let userInterest = "example";
     let url = `https://gnews.io/api/v4/search?q=${userInterest}&token=${process.env.NEWS}`;
@@ -385,7 +438,22 @@ app.get("/news", (req, res) => {
         })
 })
 
-// Functions
+app.get("/leaderboard", (req, res) => {
+    User.find({}, (err, items) => {
+        users = items.sort((a, b) =>
+            a.rank > b.rank ? 1 : b.rank > a.rank ? -1 : 0
+        ).slice(0, 10);
+        res.send(users);
+    })
+})
+
+const getCourses = require("./helper/getCourses");
+app.get("/courses", (req, res) => {
+    let random_course = getCourses();
+    res.send(random_course);
+})
+
+// Schduled Rank update
 cron.schedule("* * * * *", function () {
     console.log("Rank Updated!!!!");
     User.find({}, (err, foundUsers) => {
@@ -394,7 +462,9 @@ cron.schedule("* * * * *", function () {
         );
         let rank = 1;
         for (user of foundUsers) {
+            let badge = getBadge(user.rating);
             user.rank = rank;
+            user.title = badge.title
             user.save();
             rank += 1;
         }

@@ -126,57 +126,24 @@
         </div>
         <br>
         <div class="leaderboards">
+            <% for(user of users){ %> 
             <div class="user">
                 <div class="left-cnt">
-                    <span class="rank">01</span>
+                    <span class="rank"><%= user.rank %></span>
                     <span><img
-                            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></span>
-                    <span>Aryan Raju</span>
+                            src="<%= user.profile %>"></span>
+                    <span><%= user.name %></span>
                 </div>
                 <div class="right-cnt">
-                    <span class="title">LEGENDARY</span>
-                    <span class="score">3923</span>
+                    <span class="title"><%= user.title %></span>
+                    <span class="score"><%= user.rating %></span>
                 </div>
             </div>
-            <div class="user">
-                <div class="left-cnt">
-                    <span class="rank">02</span>
-                    <span><img
-                            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></span>
-                    <span>Aryan Raju</span>
-                </div>
-                <div class="right-cnt">
-                    <span class="title">LEGENDARY</span>
-                    <span class="score">3923</span>
-                </div>
-            </div>
-            <div class="user">
-                <div class="left-cnt">
-                    <span class="rank">03</span>
-                    <span><img
-                            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></span>
-                    <span>Aryan Raju</span>
-                </div>
-                <div class="right-cnt">
-                    <span class="title">LEGENDARY</span>
-                    <span class="score">3923</span>
-                </div>
-            </div>
-            <div class="user">
-                <div class="left-cnt">
-                    <span class="rank">04</span>
-                    <span><img
-                            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></span>
-                    <span>Aryan Raju</span>
-                </div>
-                <div class="right-cnt">
-                    <span class="title">LEGENDARY</span>
-                    <span class="score">3923</span>
-                </div>
-            </div>
+            <% } %> 
+
         </div>
     </section>
-
+☻
 </body>
 
 <script>

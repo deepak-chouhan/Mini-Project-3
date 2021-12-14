@@ -1,12 +1,253 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/resources/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/resources/favicons/safari-pinned-tab.svg" color="#0e65f3">
+    <link rel="shortcut icon" href="/resources/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#0e65f3">
+    <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#0e65f3">
+
+    <title>Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/resources\css\dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/resources/css/graph.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
+        integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="resources\css\graph.css">
 </head>
+
 <body>
-    <h1>Benchmark</h1>
+    <section class="l-nav" id="l-nav">
+        <div class="content">
+            <div class="symbol"><span>AI</span>&nbsp AI-buddy</div>
+            <div class="menu">
+                <div class="menu-head">
+                    Main menu
+                </div>
+                <ul>
+                    <li><a href="/user/dashboard"><span><img
+                                    src="/resources\img\Icons\dashboard.svg">Dashboard</span></a></li>
+                    <li><a href="/user/dashboard/3dvr"><span><img src="/resources\img\Icons\3dvr.svg">3D vr</span></a>
+                    </li>
+                    <li><a href="/user/dashboard/benchmark"><span><img
+                                    src="/resources\img\Icons\dashboard.svg">Benchmark</span></a></li>
+                    <li><a href="/user/dashboard/reading"><span><img
+                                    src="/resources\img\Icons\reading.svg">Reading</span></a></li>
+                    <li><a href="/user/dashboard/courses"><span><img
+                                    src="/resources\img\Icons\courses.svg">Courses</span></a></li>
+                    <li><a href="/user/dashboard/leaderboard"><span><img
+                                    src="/resources\img\Icons\leaderboard.svg">Leaderboard</span></a></li>
+                    <li><a href="/logout"><span><img src="/resources\img\Icons\logout.svg">Logout</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <button onclick="myFunction1()" class="lnavb"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+            viewBox="0 0 24 24" style="fill: #fff">
+            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+        </svg></button>
+
+    <button onclick="myFunction()" class="rnavb"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+            viewBox="0 0 24 24" style="fill:#fff">
+            <path d="m4.431 12.822 13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645z"></path>
+        </svg></button>
+
+    <section class="r-nav" id="r-nav">
+        <div class="content">
+            Your rank<br><br>
+            <div class="ranking">
+                <img src="/resources/img/badges/<%= badge.badge %>.svg">
+                <div class="text">
+                    <div class="head"><%= badge.title %></div>
+                    <div class="grid">
+                        <div class="pts">
+                            <% if(user.rating != 1000){ %>
+                            <div class="num"><%= user.rating %> </div>
+                            <div class="font">total rating</div>
+                            <% } else{%>
+                            <div class="unranked">
+                                unranked
+                            </div>
+                            <% } %>
+                        </div>
+                        <div class="mark"></div>
+                        <div class="rank">
+                            <% if(user.rank != 0 && user.rating != 1000){ %>
+                            <div class="num"><%= user.rank %> </div>
+                            <div class="font">world rank</div>
+                            <% } else{%>
+                            <div class="unranked">
+                                unranked
+                            </div>
+                            <% } %>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="activity">
+                <div class="head">Recent tasks</div>
+                <div class="recent">
+                    <% if(user.recent.length != 0){%>
+
+                    <% for(task of user.recent.reverse().slice(0, 5)){ %>
+
+                    <div class="activity">
+                        <span class="text">Completed a task "Benchmark"</span>
+                        <span class="points"><img src="/resources\img\Icons\task.svg">&nbsp+ <%= task.points %></span>
+                    </div>
+
+                    <% } %>
+
+                    <% }else{ %>
+                    <div class="no-activity">
+                        <span class="none">No activity</span>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dashboard">
+        <div class="dash-nav">
+            <span class="left-part">Benchmark</span>
+            <span class="right-part">
+
+                <div class="profile">
+                    <img src="<%= user.profile %>">
+                    <div><%= user.name %> </div>
+                </div>
+            </span>
+        </div>
+        <br>
+
+        <div class="benchmark">
+            <p>
+                She never liked cleaning the sink. It was beyond her comprehension how it got so dirty so quickly. It seemed that she was forced to clean it every other day. Even when she was extra careful to keep things clean and orderly, it still ended up looking like a mess in a couple of days. What she didn't know was there was a tiny creature living in it that didn't like things neat.":"The time to take action was now. All three men knew in their hearts this was the case, yet none of them moved a muscle to try. They were all watching and waiting for one of the others to make the first move so they could follow a step or two behind and help. The situation demanded a leader and all three men were followers.
+            </p>
+
+            <form action="/user/dashboard/benchmark" method="post" enctype="multipart/form-data">
+                <input type="file" name="audio" id="upload" />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </section>
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    var val1 = false;
+    var val2 = false;
+
+    function myFunction() {
+        if (val2 == false) {
+            document.getElementById("r-nav").style.width = "325px";
+            document.getElementById("r-nav").style.opacity = "1";
+            val2 = true;
+        } else {
+            document.getElementById("r-nav").style.width = "0px";
+            document.getElementById("r-nav").style.opacity = "0";
+            val2 = false;
+        }
+    }
+
+    function myFunction1() {
+        if (val1 == false) {
+            document.getElementById("l-nav").style.width = "250px";
+            document.getElementById("l-nav").style.opacity = "1";
+            val1 = true;
+        } else {
+            document.getElementById("l-nav").style.width = "0px";
+            document.getElementById("l-nav").style.opacity = "0";
+            val1 = false;
+        }
+    }
+</script>
+
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+
+    // const labels = Utils.months({
+    //     count: 7,
+    //     min: 1000,
+    //     max: 5000
+    // });
+
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
+                'October', 'November', 'December'
+            ],
+            datasets: [{
+                label: 'rating',
+                data: [123, 193, 183, 215, 221, 311, 500, 1000, 400, 340, 555, 566, 676, 800, 354],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+        }
+    });
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Chart.js Line Chart'
+                }
+            }
+        },
+    };
+</script>
+
+<script src="/resources/js/dashboard.js"></script>
+
 </html>

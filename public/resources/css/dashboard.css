@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .rnavb {
@@ -391,6 +392,36 @@
     border-radius: 5px;
     background-color: #ced1d6;
 }
+
+.benchmark {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.benchmark p {
+    background-color: #e4e5e7;
+    border-radius: 10px;
+    padding: 50px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.benchmark form{
+    gap: 20px;
+}
+
+.benchmark form button{
+    display: inline-block;
+    background-color: #0E65F3;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+
 
 
 
