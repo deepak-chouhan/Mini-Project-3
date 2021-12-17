@@ -17,10 +17,13 @@ const multer = require("multer");
 
 // Data
 const interests = require("./data/interests");
+const paragraphs = require("./data/para_data.json");
+const getBadge = require("./helper/badge");
+
 const {
     use
 } = require("passport");
-const getBadge = require("./helper/badge");
+
 const {
     Console
 } = require("console");
@@ -283,9 +286,13 @@ app.route("/user/dashboard/:page")
                         break;
 
                     case "benchmark":
+                        const paras = 50;
+                        let randNum = Math.floor(Math.random() * paras)
+
                         res.render("benchmark", {
                             user: user,
                             badge: badge,
+                            para: paragraphs[randNum].para
                         });
                         break;
 
@@ -339,29 +346,45 @@ app.route("/user/dashboard/:page")
     })
 
 app.post("/user/dashboard/benchmark", upload.single("audio"), (req, res) => {
-
     if (req.isAuthenticated()) {
-
         const file = req.file
+        let rating = 0;
 
-        let rating = 50;
+        // Input object for sending request
+        const par = {
+            string: req.body.para,
+            buffer: file.buffer.toString('base64')
+        }
+        // Send request to api
+        let response = sendReq(par)
+        response.then((result) => {
+            rating += Math.round(result.data.status + result.data.value[0])
 
-        // Add new activity
-        const activity = new Activity({
-            name: "Benchmark",
-            points: rating
+            console.log(rating);
+            // Add new activity
+            const activity = new Activity({
+                name: "Benchmark",
+                points: rating
+            })
+
+            // Update the rating of user
+            User.findById(req.user.id, (err, foundUsers) => {
+                foundUsers.rating += rating;
+                foundUsers.recent.push(activity);
+                foundUsers.save();
+            })
+            res.redirect("/user/dashboard/benchmark")
         })
-
-        User.findById(req.user.id, (err, foundUsers) => {
-            foundUsers.rating += rating;
-            foundUsers.recent.push(activity);
-
-            foundUsers.save();
-        })
-
-        res.redirect("/user/dashboard/benchmark")
     }
 
+})
+
+// VR ROOMS
+
+app.get("/vr/:room", (req, res) => {
+
+    let room = req.params.room;
+    res.render(room)
 })
 
 app.route("/login")
@@ -446,6 +469,45 @@ app.get("/leaderboard", (req, res) => {
         res.send(users);
     })
 })
+
+// AI Critituq test
+app.get("/crit", (req, res) => {
+
+    const paras = 50;
+    let randNum = Math.floor(Math.random() * paras)
+
+    // console.log(paragraphs[randNum].para)
+    res.render("critique", {
+        para: paragraphs[randNum].para
+    })
+
+})
+
+// Async function for sending request
+async function sendReq(data) {
+    console.log("IN ASYNNC")
+    const url = "http://127.0.0.1:8000/";
+    const resp = await axios.post(url, data)
+    console.log(resp)
+    return resp
+}
+
+app.post("/crit", upload.single("audio"), (req, res) => {
+
+    const file = req.file;
+    const par = {
+        string: req.body.para,
+        buffer: file.buffer.toString('base64')
+    }
+    let response = sendReq(par)
+    response.then((result) => {
+        console.log(result.data.value[0])
+        res.send(result.data)
+    })
+
+})
+
+//
 
 const getCourses = require("./helper/getCourses");
 app.get("/courses", (req, res) => {

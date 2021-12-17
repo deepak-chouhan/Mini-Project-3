@@ -144,11 +144,10 @@
         <br>
 
         <div class="benchmark">
-            <p>
-                She never liked cleaning the sink. It was beyond her comprehension how it got so dirty so quickly. It seemed that she was forced to clean it every other day. Even when she was extra careful to keep things clean and orderly, it still ended up looking like a mess in a couple of days. What she didn't know was there was a tiny creature living in it that didn't like things neat.":"The time to take action was now. All three men knew in their hearts this was the case, yet none of them moved a muscle to try. They were all watching and waiting for one of the others to make the first move so they could follow a step or two behind and help. The situation demanded a leader and all three men were followers.
-            </p>
+            <p><%= para %></p>
 
             <form action="/user/dashboard/benchmark" method="post" enctype="multipart/form-data">
+                <input type="text" name="para" value="<%= para %> " id="" hidden>
                 <input type="file" name="audio" id="upload" />
                 <button type="submit">Submit</button>
             </form>

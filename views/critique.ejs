@@ -9,9 +9,11 @@
 </head>
 
 <body>
-    <h1>Benchmark</h1>
-    <form action="/user/dashboard/benchmark" method="post" enctype="multipart/form-data">
-        <input type="file" name="audio" id="" />
+    <p><%= para %> </p>
+
+    <form action="/crit" method="post" enctype="multipart/form-data">
+        <input type="text" name="para" value="<%= para %> " id="" hidden>
+        <input type="file" name="audio" id="upload" />
         <button type="submit">Submit</button>
     </form>
 </body>

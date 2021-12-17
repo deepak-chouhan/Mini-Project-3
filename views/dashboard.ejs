@@ -111,10 +111,14 @@
                 <div class="head">Recent tasks</div>
                 <div class="recent">
                     <% if(user.recent.length != 0){%>
+                    <% for(task of user.recent.reverse().slice(0, 5)){ %>
+
                     <div class="activity">
                         <span class="text">Completed a task "Benchmark"</span>
-                        <span class="points"><img src="/resources\img\Icons\task.svg">&nbsp+70</span>
+                        <span class="points"><img src="/resources\img\Icons\task.svg">&nbsp+ <%= task.points %></span>
                     </div>
+
+                    <% } %>
                     <% }else{ %>
                     <div class="no-activity">
                         <span class="none">No activity</span>
@@ -199,12 +203,6 @@
 
 <script>
     var ctx = document.getElementById('myChart').getContext('2d');
-
-    // const labels = Utils.months({
-    //     count: 7,
-    //     min: 1000,
-    //     max: 5000
-    // });
 
     var myChart = new Chart(ctx, {
         type: 'line',

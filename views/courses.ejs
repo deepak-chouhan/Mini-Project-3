@@ -100,10 +100,14 @@
                 <div class="head">Recent tasks</div>
                 <div class="recent">
                     <% if(user.recent.length != 0){%>
+                    <% for(task of user.recent.reverse().slice(0, 5)){ %>
+
                     <div class="activity">
                         <span class="text">Completed a task "Benchmark"</span>
-                        <span class="points"><img src="/resources\img\Icons\task.svg">&nbsp+70</span>
+                        <span class="points"><img src="/resources\img\Icons\task.svg">&nbsp+ <%= task.points %></span>
                     </div>
+
+                    <% } %>
                     <% }else{ %>
                     <div class="no-activity">
                         <span class="none">No activity</span>
@@ -128,7 +132,7 @@
         <br>
         <div class="course-wrap">
 
-            <% for(course of courses){ %> 
+            <% for(course of courses){ %>
 
             <a href="https://www.udemy.com<%= course.url %> " target="_blank" class="course">
                 <div class="img-contain">
@@ -140,7 +144,7 @@
                 </div>
             </a>
 
-            <% } %> 
+            <% } %>
 
         </div>
     </section>

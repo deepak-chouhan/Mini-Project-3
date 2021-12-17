@@ -100,10 +100,14 @@
                 <div class="head">Recent tasks</div>
                 <div class="recent">
                     <% if(user.recent.length != 0){%>
+                    <% for(task of user.recent.reverse().slice(0, 5)){ %>
+
                     <div class="activity">
                         <span class="text">Completed a task "Benchmark"</span>
-                        <span class="points"><img src="/resources\img\Icons\task.svg">&nbsp+70</span>
+                        <span class="points"><img src="/resources\img\Icons\task.svg">&nbsp+ <%= task.points %></span>
                     </div>
+
+                    <% } %>
                     <% }else{ %>
                     <div class="no-activity">
                         <span class="none">No activity</span>
@@ -126,12 +130,11 @@
         </div>
         <br>
         <div class="leaderboards">
-            <% for(user of users){ %> 
+            <% for(user of users){ %>
             <div class="user">
                 <div class="left-cnt">
                     <span class="rank"><%= user.rank %></span>
-                    <span><img
-                            src="<%= user.profile %>"></span>
+                    <span><img src="<%= user.profile %>"></span>
                     <span><%= user.name %></span>
                 </div>
                 <div class="right-cnt">
@@ -139,11 +142,11 @@
                     <span class="score"><%= user.rating %></span>
                 </div>
             </div>
-            <% } %> 
+            <% } %>
 
         </div>
     </section>
-☻
+    ☻
 </body>
 
 <script>

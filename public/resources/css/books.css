@@ -37,14 +37,14 @@
 }
 
 .book .bk-name {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
     color: rgb(36, 36, 36);
 }
 
 .book .bk-auth {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 300;
     color: rgb(179, 179, 179);
 }
 

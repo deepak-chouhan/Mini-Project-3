@@ -1,5 +1,8 @@
 $(document).ready(() => {
 
+    // Set graph
+    let id = document.getElementById
+
     // Random word function
     const setWord = () => {
 

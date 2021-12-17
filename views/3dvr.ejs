@@ -100,10 +100,14 @@
                 <div class="head">Recent tasks</div>
                 <div class="recent">
                     <% if(user.recent.length != 0){%>
+                    <% for(task of user.recent.reverse().slice(0, 5)){ %>
+
                     <div class="activity">
                         <span class="text">Completed a task "Benchmark"</span>
-                        <span class="points"><img src="/resources\img\Icons\task.svg">&nbsp+70</span>
+                        <span class="points"><img src="/resources\img\Icons\task.svg">&nbsp+ <%= task.points %></span>
                     </div>
+
+                    <% } %>
                     <% }else{ %>
                     <div class="no-activity">
                         <span class="none">No activity</span>
@@ -128,32 +132,25 @@
         <br>
 
         <div class="vr-wrap">
-            <a href="#" class="vr-card">
+            <a href="/vr/room1" class="vr-card">
                 <div class="filter"></div>
                 <img src="https://bit.ly/3iEZmr4">
                 <div class="desc">
-                    TedX stage
+                    Auditorium
                 </div>
             </a>
-            <a href="#" class="vr-card">
+            <a href="/vr/room2" class="vr-card">
                 <div class="filter"></div>
                 <img src="https://bit.ly/3iEZmr4">
                 <div class="desc">
-                    TedX stage
+                    Hall
                 </div>
             </a>
-            <a href="#" class="vr-card">
+            <a href="/vr/room3" class="vr-card">
                 <div class="filter"></div>
                 <img src="https://bit.ly/3BmXTgj">
                 <div class="desc">
-                    TedX stage
-                </div>
-            </a>
-            <a href="#" class="vr-card">
-                <div class="filter"></div>
-                <img src="https://bit.ly/3BmXTgj">
-                <div class="desc">
-                    TedX stage
+                    Classroom
                 </div>
             </a>
         </div>
