@@ -29,7 +29,7 @@ There are a bunch of libraries also used in the website mainly for tasks related
 - Keras
 
 ### Proposed system
-#### Functinal design 
+#### Functional design 
 ![MP3_2](https://user-images.githubusercontent.com/69458937/147387535-8547f608-1248-41d2-bf79-636ca3235cc3.png)
 The above diagram shows the brief working of our website, this includes Frontend, Backend, database, API, and machine learning models.
 
@@ -56,7 +56,7 @@ The emotion classifier classifies the emotion out of 5 categories
 The steps involved for predicting the emotion from audio:-
 
 - The Model takes audio file as an input and with the help of the python library “Librosa”. 
--We extract the features, then we reshape the features by [1, 40, 1], so that it matches with the machine learning model input type. 
+- We extract the features, then we reshape the features by [1, 40, 1], so that it matches with the machine learning model input type. 
 - After reshaping it, we feed the data to our machine learning model. 
 - In return the model gives us the array of number which we need to decode the help of “Label Encoder”. It has a function provided specifically for the task called “inverse_transform”
 - Once we have decoded the array of number, we will get the exact emotion of Audio speech given by user.
