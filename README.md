@@ -2,7 +2,7 @@
 
 University mini-project, 5th semester
 
-## Problem statement
+## 💡 Problem statement
 
 To Create a website which will help people improve their Public Speaking and Presentation skill.
 AI-Buddy is a website-based language learning and personality development platform which focuses on overall improvement on the user’s ability to speak with confidence in public and also get to know the language in depth.
@@ -14,7 +14,7 @@ This project provides a competitive platform where users develop their communica
 ## Goal and Vision
 This system consists of various features, like new words and tongue twisters to exercise their tongue and 3D VR environment to give them an emerging experience of the stage at home with the help of VR Headset and provide them an AI helper to help them with their speech.
 
-## Requirements
+## 🛠 Requirements
 There are two main web frameworks used in the construction of the web application: -
 **Node.JS**:-  A java Script based web framework used for making the backend of the website
 **Django** :– A python-based web framework use to make the main API for the website
@@ -30,7 +30,7 @@ There are a bunch of libraries also used in the website mainly for tasks related
 - Matplotlib
 - Keras
 
-## Proposed system
+## 📝 Proposed solution
 ### Functional design 
 ![MP3_2](https://user-images.githubusercontent.com/69458937/147387535-8547f608-1248-41d2-bf79-636ca3235cc3.png)
 The above diagram shows the brief working of our website, this includes Frontend, Backend, database, API, and machine learning models.
