@@ -7,11 +7,11 @@ University mini-project, 5th semester
 To Create a website which will help people improve their Public Speaking and Presentation skill.
 AI-Buddy is a website-based language learning and personality development platform which focuses on overall improvement on the user’s ability to speak with confidence in public and also get to know the language in depth.
 
-## Purpose
+## 🎯 Purpose
 
 This project provides a competitive platform where users develop their communication skill by practicing with our Machine Learning model and can experience a stage like experience standing at home. Users can monitor their progress, work to improve, learn new words etc. This helps the user get more and more confident in their skills to face an interview, speak in front of a crowd or talk confidently without fumbling. We also provide necessary study material from the best sources so that your knowledge never gets stagnant and you keep learning.
 
-## Goal and Vision
+## 🏆 Goal and Vision
 This system consists of various features, like new words and tongue twisters to exercise their tongue and 3D VR environment to give them an emerging experience of the stage at home with the help of VR Headset and provide them an AI helper to help them with their speech.
 
 ## 🛠 Requirements
