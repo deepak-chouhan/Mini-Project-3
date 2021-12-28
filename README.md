@@ -32,7 +32,8 @@ There are a bunch of libraries also used in the website mainly for tasks related
 
 ## 📝 Proposed solution
 ### Functional design 
-![main](https://user-images.githubusercontent.com/69458937/147549936-f097d6f4-d027-492d-a667-8beaef6ab7e1.jpg)
+![main](https://user-images.githubusercontent.com/69458937/147550542-542d2e1f-e9fb-4b49-8216-c714b8bccfe2.jpg)
+
 The above diagram shows the brief working of our website, this includes Frontend, Backend, database, API, and machine learning models.
 
 ### Backend functional design
