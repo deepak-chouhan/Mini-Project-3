@@ -1,6 +1,5 @@
 # Mini-Project-3
-
-University mini-project, 5th semester
+![Landing page](https://user-images.githubusercontent.com/69458937/147550939-2a05593f-2f36-4ecb-90b8-8ddcab5987af.png)
 
 ## 💡 Problem statement
 
