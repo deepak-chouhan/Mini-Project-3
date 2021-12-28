@@ -37,10 +37,11 @@ There are a bunch of libraries also used in the website mainly for tasks related
 The above diagram shows the brief working of our website, this includes Frontend, Backend, database, API, and machine learning models.
 
 ### Backend functional design
-![MP3_1](https://user-images.githubusercontent.com/69458937/147387568-0de1cf2e-a1a9-4580-80af-063c0a2b06f2.png)
+![2](https://user-images.githubusercontent.com/69458937/147550809-d197fe7f-0786-4d58-8112-5080f00e05f3.jpg)
+
 
 ### Machine learning model design
-![MP3_3](https://user-images.githubusercontent.com/69458937/147387586-a660dfcc-feb3-4844-97c2-eda2de28b655.png)
+![3](https://user-images.githubusercontent.com/69458937/147550866-30726feb-fdba-4639-a261-dd51ea5d8081.jpg)
 
 The Machine learning model consist of 2 features which are
 - Emotion Classifier
